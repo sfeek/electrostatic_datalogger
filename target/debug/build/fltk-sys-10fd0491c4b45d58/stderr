@@ -1,0 +1,21 @@
+error: patch failed: src/Fl_win32.cxx:610
+error: src/Fl_win32.cxx: patch does not apply
+CMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 3.5 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+
+
+
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    CMAKE_ASM_COMPILER
+    CMAKE_ASM_FLAGS
+    OpenGL_GL_PREFERENCE
+
+
+fatal: not a git repository (or any of the parent directories): .git

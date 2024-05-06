@@ -5,7 +5,7 @@ use fltk::prelude::*;
 use fltk::{app::*, button::*, dialog::*, enums::FrameType, frame::*, misc::*, text::*, window::*};
 use serde::Deserialize;
 use std::io::prelude::*;
-use std::{fs::OpenOptions, io::Write, sync::Arc, sync::RwLock, thread};
+use std::{fs::OpenOptions, io::Write, sync::*, thread};
 
 #[derive(Debug, Clone, Copy)]
 pub enum Message {
@@ -16,7 +16,7 @@ pub enum Message {
 }
 
 #[derive(Debug, Clone, Copy)]
-struct C_Values {
+struct CValues {
     c1: i32,
     c2: i32,
     c3: i32,
@@ -25,17 +25,33 @@ struct C_Values {
 
 #[derive(Debug, Deserialize)]
 struct OneLine {
-    cnt: i32,
+    _cnt: i32,
     v1: i32,
     v2: i32,
     v3: i32,
     v4: i32,
-    v5: i32,
-    v6: i32,
-    v7: i32,
-    v8: i32,
-    v9: i32,
-    v10: i32,
+    _v5: i32,
+    _v6: i32,
+    _v7: i32,
+    _v8: i32,
+    _v9: i32,
+    _v10: i32,
+}
+
+#[derive(Debug, Deserialize)]
+struct OneLineTimeStamp {
+    dt: String,
+    tm: String,
+    v1: i32,
+    v2: i32,
+    v3: i32,
+    v4: i32,
+    _v5: i32,
+    _v6: i32,
+    _v7: i32,
+    _v8: i32,
+    _v9: i32,
+    _v10: i32,
 }
 
 fn main() {
@@ -48,14 +64,6 @@ fn main() {
     // Place to put the filename
     let mut file_name: String = String::new();
 
-    // Place to put calibration values
-    let mut c = C_Values {
-        c1: 0,
-        c2: 0,
-        c3: 0,
-        c4: 0,
-    };
-
     // Main Window
     let mut wind = Window::new(100, 100, 800, 530, "Electrostatic Data Logger v1.0");
 
@@ -63,19 +71,12 @@ fn main() {
     let mut output: SimpleTerminal = SimpleTerminal::new(10, 10, 385, 400, "");
     let mut frame: Frame = Frame::new(405, 10, 385, 400, "");
     let mut com_port: InputChoice = InputChoice::new(350, 420, 80, 30, "COM Port");
-    let mut com_settings: InputChoice = InputChoice::new(350, 470, 80, 30, "COM Baud");
 
     frame.set_frame(FrameType::EmbossedFrame);
 
     output.set_stay_at_bottom(true);
     output.set_ansi(false);
     output.set_cursor_style(Cursor::Normal);
-
-    let bauds: Vec<&str> = vec!["1200", "9600", "19200", "115200"];
-
-    for b in bauds {
-        com_settings.add(b);
-    }
 
     // Look for usable COM ports and populate drop down
     let ports = serialport::available_ports().expect("No ports found!");
@@ -98,6 +99,7 @@ fn main() {
 
     // Setup the message handler
     let (s, r) = channel::<Message>();
+    let (s_cvalues, r_cvalues) = channel::<CValues>();
 
     // Attach messages to event emitters
     start_button.emit(s, Message::Start);
@@ -109,34 +111,42 @@ fn main() {
     while app.wait() {
         if let Some(msg) = r.recv() {
             match msg {
-                Message::Start => start(
-                    &running,
-                    &mut com_port,
-                    &mut com_settings,
-                    &file_name,
-                    &mut output,
-                    &mut start_button,
-                    &mut stop_button,
-                    &mut calibrate_button,
-                    &mut c,
-                ),
+                Message::Start => {
+                    let cv = r_cvalues.recv();
+                    match cv {
+                        Some(c) => start(
+                            &running,
+                            &mut com_port,
+                            &file_name,
+                            &mut output,
+                            &mut start_button,
+                            &mut stop_button,
+                            &mut calibrate_button,
+                            &mut file_button,
+                            c,
+                        ),
+                        None => output.append(&format!("{:?}",cv)),
+                    };
+                }
                 Message::Stop => stop(
                     &running,
                     &mut start_button,
                     &mut stop_button,
                     &mut calibrate_button,
+                    &mut file_button,
                 ),
                 Message::File => file_name = file_chooser(&app),
                 Message::Calibrate => {
-                    c = calibrate(
+                    calibrate(
                         &running,
                         &mut com_port,
-                        &mut com_settings,
                         &mut output,
                         &mut start_button,
                         &mut stop_button,
                         &mut calibrate_button,
-                    )
+                        &mut file_button,
+                        s_cvalues,
+                    );
                 }
             }
         }
@@ -147,22 +157,24 @@ fn main() {
 fn start(
     running: &Arc<RwLock<i32>>,
     com_port: &mut InputChoice,
-    com_settings: &mut InputChoice,
     file_name: &String,
     output: &mut SimpleTerminal,
     start_button: &mut Button,
     stop_button: &mut Button,
     calibrate_button: &mut Button,
-    c_values: &mut C_Values,
+    file_button: &mut Button,
+    c_values: CValues,
 ) {
     // Make sure user has choosen a file
     if file_name == "" {
         return;
     }
+
     // Toggle the start/stop buttons
     start_button.deactivate();
     stop_button.activate();
     calibrate_button.deactivate();
+    file_button.deactivate();
 
     // Set thread status to running
     *running.write().unwrap() = 1;
@@ -170,22 +182,22 @@ fn start(
     // Make a clone of the thread status for the sub thread
     let thread_status = Arc::clone(&running);
 
+    // Get settings for the COM port
+    let baud = 115200;
+
+    let port = match com_port.value() {
+        Some(val) => val,
+        None => return,
+    };
+
     // Get a clone the form controls
     let mut out_handle = output.clone();
     let file_name = file_name.clone();
     let mut start_button = start_button.clone();
     let mut stop_button = stop_button.clone();
     let mut calibrate_button = calibrate_button.clone();
-
-    // Get settings for the COM port
-    let baud = match com_settings.value() {
-        Some(val) => val.parse::<u32>().unwrap(),
-        None => return,
-    };
-    let port = match com_port.value() {
-        Some(val) => val,
-        None => return,
-    };
+    let mut file_button = file_button.clone();
+    let cvalues = c_values.clone();
 
     // Spawn the subthread to take readings
     thread::spawn(move || {
@@ -194,6 +206,22 @@ fn start(
         let mut out_buf: Vec<u8> = Vec::new();
         let mut final_buf: Vec<u8> = Vec::new();
         let mut one_line: Vec<u8> = Vec::new();
+
+        // Place to store our CSV values
+        let mut csv_values: OneLineTimeStamp = OneLineTimeStamp {
+            dt: "".to_string(),
+            tm: "".to_string(),
+            v1: 0,
+            v2: 0,
+            v3: 0,
+            v4: 0,
+            _v5: 0,
+            _v6: 0,
+            _v7: 0,
+            _v8: 0,
+            _v9: 0,
+            _v10: 0,
+        };
 
         // Open the serial port
         let mut serial_port = serialport::new(port, baud).open();
@@ -230,6 +258,7 @@ fn start(
                                 start_button.activate();
                                 stop_button.deactivate();
                                 calibrate_button.activate();
+                                file_button.activate();
                                 break;
                             }
 
@@ -249,20 +278,49 @@ fn start(
 
                                                 // Append time stamp and line of data
                                                 final_buf.append(&mut time_stamp);
+
+                                                //Get the line of CSV into the buffer
                                                 final_buf.append(&mut one_line);
                                                 final_buf
                                                     .append(&mut "\n".to_string().into_bytes());
 
+                                                // Break out the CSV into i32 values and store in a struct
+                                                let mut reader = ReaderBuilder::new()
+                                                    .delimiter(b',')
+                                                    .has_headers(false)
+                                                    .from_reader(final_buf.as_slice());
+
+                                                for result in reader.deserialize() {
+                                                    csv_values = result.unwrap();
+                                                }
+
                                                 // Send to display window
-                                                out_handle.append(
-                                                    std::str::from_utf8(&final_buf).unwrap(),
+                                                out_handle.append(&format!(
+                                                    "{},{},{},{},{},{}\n",
+                                                    csv_values.dt,
+                                                    csv_values.tm,
+                                                    csv_values.v1 - cvalues.c1,
+                                                    csv_values.v2 - cvalues.c2,
+                                                    csv_values.v3 - cvalues.c3,
+                                                    csv_values.v4 - cvalues.c4,
+                                                ));
+
+                                                // Make CSV to send to the file
+                                                let file_out: String = format!(
+                                                    "{},{},{},{},{},{}\n",
+                                                    csv_values.dt,
+                                                    csv_values.tm,
+                                                    csv_values.v1 - cvalues.c1,
+                                                    csv_values.v2 - cvalues.c2,
+                                                    csv_values.v3 - cvalues.c3,
+                                                    csv_values.v4 - cvalues.c4,
                                                 );
 
                                                 // Refresh the terminal window
                                                 awake();
 
                                                 // Send to file
-                                                match f.write_all(&final_buf) {
+                                                match f.write_all(&file_out.into_bytes()) {
                                                     Ok(_) => (),
                                                     Err(_) => {
                                                         *thread_status.write().unwrap() = 0;
@@ -304,24 +362,28 @@ fn start(
 fn calibrate(
     running: &Arc<RwLock<i32>>,
     com_port: &mut InputChoice,
-    com_settings: &mut InputChoice,
     output: &mut SimpleTerminal,
     start_button: &mut Button,
     stop_button: &mut Button,
     calibrate_button: &mut Button,
-) -> C_Values {
+    file_button: &mut Button,
+    s: Sender<CValues>,
+) {
     // Empty struct with 0 for calibration values
-    let mut avg = C_Values {
+    let mut avg = CValues {
         c1: 0,
         c2: 0,
         c3: 0,
         c4: 0,
     };
 
-    // Toggle the start/stop buttons
-    start_button.deactivate();
-    calibrate_button.deactivate();
-    stop_button.activate();
+    // Place to store our calibration readings
+    let mut c = CValues {
+        c1: 0,
+        c2: 0,
+        c3: 0,
+        c4: 0,
+    };
 
     // Set thread status to running
     *running.write().unwrap() = 1;
@@ -329,21 +391,26 @@ fn calibrate(
     // Make a clone of the thread status for the sub thread
     let thread_status = Arc::clone(&running);
 
+    // Get settings for the COM port
+    let baud = 115200;
+
+    let port = match com_port.value() {
+        Some(val) => val,
+        None => return,
+    };
+
+    // Toggle the start/stop buttons
+    start_button.deactivate();
+    calibrate_button.deactivate();
+    stop_button.activate();
+    file_button.deactivate();
+
     // Get a clone the form controls
     let mut out_handle = output.clone();
     let mut start_button = start_button.clone();
     let mut stop_button = stop_button.clone();
     let mut calibrate_button = calibrate_button.clone();
-
-    // Get settings for the COM port
-    let baud = match com_settings.value() {
-        Some(val) => val.parse::<u32>().unwrap(),
-        None => return avg,
-    };
-    let port = match com_port.value() {
-        Some(val) => val,
-        None => return avg,
-    };
+    let mut file_button = file_button.clone();
 
     // Spawn the subthread to take readings
     thread::spawn(move || {
@@ -352,26 +419,20 @@ fn calibrate(
         let mut out_buf: Vec<u8> = Vec::new();
         let mut final_buf: Vec<u8> = Vec::new();
         let mut one_line: Vec<u8> = Vec::new();
-        let mut c = C_Values {
-            c1: 0,
-            c2: 0,
-            c3: 0,
-            c4: 0,
-        };
 
         // Place to store our CSV values
         let mut csv_values: OneLine = OneLine {
-            cnt: 0,
+            _cnt: 0,
             v1: 0,
             v2: 0,
             v3: 0,
             v4: 0,
-            v5: 0,
-            v6: 0,
-            v7: 0,
-            v8: 0,
-            v9: 0,
-            v10: 0,
+            _v5: 0,
+            _v6: 0,
+            _v7: 0,
+            _v8: 0,
+            _v9: 0,
+            _v10: 0,
         };
 
         // Count number of calibration records
@@ -397,6 +458,8 @@ fn calibrate(
                         start_button.activate();
                         stop_button.deactivate();
                         calibrate_button.activate();
+                        file_button.activate();
+                        s.send(avg);
                         break;
                     }
 
@@ -410,6 +473,8 @@ fn calibrate(
                                     if out_buf.len() < 3 {
                                         // Add one to the record count
                                         count += 1;
+
+                                        //Get the line of CSV into the buffer
                                         final_buf.append(&mut count.to_string().into_bytes());
                                         final_buf.append(&mut one_line);
                                         final_buf.append(&mut "\n".to_string().into_bytes());
@@ -454,10 +519,16 @@ fn calibrate(
                                                 avg.c1, avg.c2, avg.c3, avg.c4
                                             ));
 
-                                            awake();
+                                            // Send the calibration values to the main thread
+                                            s.send(avg);
+
+                                            // Change Button status
                                             start_button.activate();
                                             stop_button.deactivate();
                                             calibrate_button.activate();
+                                            file_button.activate();
+
+                                            awake();
 
                                             break;
                                         }
@@ -489,10 +560,9 @@ fn calibrate(
                 }
             }
             Err(_) => {}
-        }
+        };
     });
-    
-    avg
+    s.send(avg);
 }
 
 // Stop logging
@@ -501,11 +571,13 @@ fn stop(
     start_button: &mut Button,
     stop_button: &mut Button,
     calibrate_button: &mut Button,
+    file_button: &mut Button,
 ) {
     // Toggle the start/stop buttons
     start_button.activate();
     calibrate_button.activate();
     stop_button.deactivate();
+    file_button.activate();
 
     // Set thread status to not running
     *running.write().unwrap() = 0;

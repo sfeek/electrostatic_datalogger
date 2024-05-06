@@ -1,0 +1,1131 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineSystem.cmake:205 (message)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      The system is: Windows - 10.0.19045 - AMD64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.39.33519/bin/HostX64/x64/cl.exe 
+      Build flags: -nologo;-MD;-Brepro
+      Id flags:  
+      
+      The output was:
+      0
+      CMakeCCompilerId.c
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.exe"
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.obj"
+      
+      The C compiler identification is MSVC, found in:
+        C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/3.29.2/CompilerIdC/CMakeCCompilerId.exe
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:1216 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:250 (CMAKE_DETERMINE_MSVC_SHOWINCLUDES_PREFIX)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Detecting C compiler /showIncludes prefix:
+        main.c
+        Note: including file: C:\\Source Code\\electrostatic_datalogger\\target\\debug\\build\\fltk-sys-10fd0491c4b45d58\\out\\build\\CMakeFiles\\ShowIncludes\\foo.h
+        
+      Found prefix "Note: including file: "
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.39.33519/bin/HostX64/x64/cl.exe 
+      Build flags: -nologo;-MD;-Brepro
+      Id flags:  
+      
+      The output was:
+      0
+      CMakeCXXCompilerId.cpp
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.exe"
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.obj"
+      
+      The CXX compiler identification is MSVC, found in:
+        C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/3.29.2/CompilerIdCXX/CMakeCXXCompilerId.exe
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:1216 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:250 (CMAKE_DETERMINE_MSVC_SHOWINCLUDES_PREFIX)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Detecting CXX compiler /showIncludes prefix:
+        main.c
+        Note: including file: C:\\Source Code\\electrostatic_datalogger\\target\\debug\\build\\fltk-sys-10fd0491c4b45d58\\out\\build\\CMakeFiles\\ShowIncludes\\foo.h
+        
+      Found prefix "Note: including file: "
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:64 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:4 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-7t0djl"
+      binary: "C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-7t0djl"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -nologo -MD -Brepro"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-7t0djl'
+        
+        Run Build Command(s): C:/PROGRA~1/CMake/bin/ninja.exe -v cmTC_5074b
+        [1/2] C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\HostX64\\x64\\cl.exe  /nologo   -nologo -MD -Brepro  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\\cmTC_5074b.dir\\CMakeCCompilerABI.c.obj /FdCMakeFiles\\cmTC_5074b.dir\\ /FS -c "C:\\Program Files\\CMake\\share\\cmake-3.29\\Modules\\CMakeCCompilerABI.c"
+        cl : Command line warning D9025 : overriding '/MD' with '/MDd'
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_5074b.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_5074b.dir\\CMakeCCompilerABI.c.obj  /out:cmTC_5074b.exe /implib:cmTC_5074b.lib /pdb:cmTC_5074b.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:170 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
+        linker tool for 'C': C:/PROGRA~1/MICROS~2/2022/COMMUN~1/VC/Tools/MSVC/1439~1.335/bin/Hostx64/x64/link.exe
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:207 (cmake_determine_linker_id)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Running the C compiler's linker: "C:/PROGRA~1/MICROS~2/2022/COMMUN~1/VC/Tools/MSVC/1439~1.335/bin/Hostx64/x64/link.exe" "-v"
+      Microsoft (R) Incremental Linker Version 14.39.33523.0
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:64 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:4 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-dnxjra"
+      binary: "C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-dnxjra"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -nologo -MD -Brepro"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-dnxjra'
+        
+        Run Build Command(s): C:/PROGRA~1/CMake/bin/ninja.exe -v cmTC_b1ff0
+        [1/2] C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\HostX64\\x64\\cl.exe  /nologo /TP   -nologo -MD -Brepro  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\\cmTC_b1ff0.dir\\CMakeCXXCompilerABI.cpp.obj /FdCMakeFiles\\cmTC_b1ff0.dir\\ /FS -c "C:\\Program Files\\CMake\\share\\cmake-3.29\\Modules\\CMakeCXXCompilerABI.cpp"
+        cl : Command line warning D9025 : overriding '/MD' with '/MDd'
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_b1ff0.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_b1ff0.dir\\CMakeCXXCompilerABI.cpp.obj  /out:cmTC_b1ff0.exe /implib:cmTC_b1ff0.lib /pdb:cmTC_b1ff0.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:170 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
+        linker tool for 'CXX': C:/PROGRA~1/MICROS~2/2022/COMMUN~1/VC/Tools/MSVC/1439~1.335/bin/Hostx64/x64/link.exe
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:207 (cmake_determine_linker_id)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Running the CXX compiler's linker: "C:/PROGRA~1/MICROS~2/2022/COMMUN~1/VC/Tools/MSVC/1439~1.335/bin/Hostx64/x64/link.exe" "-v"
+      Microsoft (R) Incremental Linker Version 14.39.33523.0
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckTypeSize.cmake:250 (check_include_file)"
+      - "fltk/CMake/setup.cmake:153 (CHECK_TYPE_SIZE)"
+      - "fltk/CMakeLists.txt:68 (include)"
+    checks:
+      - "Looking for sys/types.h"
+    directories:
+      source: "C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-n1sosp"
+      binary: "C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-n1sosp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -nologo -MD -Brepro"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/Shane/.cargo/registry/src/index.crates.io-6f17d22bba15001f/fltk-sys-1.4.25/cfltk/fltk/CMake"
+    buildResult:
+      variable: "HAVE_SYS_TYPES_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-n1sosp'
+        
+        Run Build Command(s): C:/PROGRA~1/CMake/bin/ninja.exe -v cmTC_9954e
+        [1/2] C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\HostX64\\x64\\cl.exe  /nologo   -nologo -MD -Brepro  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\\cmTC_9954e.dir\\CheckIncludeFile.c.obj /FdCMakeFiles\\cmTC_9954e.dir\\ /FS -c "C:\\Source Code\\electrostatic_datalogger\\target\\debug\\build\\fltk-sys-10fd0491c4b45d58\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-n1sosp\\CheckIncludeFile.c"
+        cl : Command line warning D9025 : overriding '/MD' with '/MDd'
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_9954e.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_9954e.dir\\CheckIncludeFile.c.obj  /out:cmTC_9954e.exe /implib:cmTC_9954e.lib /pdb:cmTC_9954e.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckTypeSize.cmake:251 (check_include_file)"
+      - "fltk/CMake/setup.cmake:153 (CHECK_TYPE_SIZE)"
+      - "fltk/CMakeLists.txt:68 (include)"
+    checks:
+      - "Looking for stdint.h"
+    directories:
+      source: "C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-b7iow2"
+      binary: "C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-b7iow2"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -nologo -MD -Brepro"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/Shane/.cargo/registry/src/index.crates.io-6f17d22bba15001f/fltk-sys-1.4.25/cfltk/fltk/CMake"
+    buildResult:
+      variable: "HAVE_STDINT_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-b7iow2'
+        
+        Run Build Command(s): C:/PROGRA~1/CMake/bin/ninja.exe -v cmTC_5649c
+        [1/2] C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\HostX64\\x64\\cl.exe  /nologo   -nologo -MD -Brepro  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\\cmTC_5649c.dir\\CheckIncludeFile.c.obj /FdCMakeFiles\\cmTC_5649c.dir\\ /FS -c "C:\\Source Code\\electrostatic_datalogger\\target\\debug\\build\\fltk-sys-10fd0491c4b45d58\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-b7iow2\\CheckIncludeFile.c"
+        cl : Command line warning D9025 : overriding '/MD' with '/MDd'
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_5649c.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_5649c.dir\\CheckIncludeFile.c.obj  /out:cmTC_5649c.exe /implib:cmTC_5649c.lib /pdb:cmTC_5649c.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckTypeSize.cmake:252 (check_include_file)"
+      - "fltk/CMake/setup.cmake:153 (CHECK_TYPE_SIZE)"
+      - "fltk/CMakeLists.txt:68 (include)"
+    checks:
+      - "Looking for stddef.h"
+    directories:
+      source: "C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-zyhmt7"
+      binary: "C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-zyhmt7"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -nologo -MD -Brepro"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/Shane/.cargo/registry/src/index.crates.io-6f17d22bba15001f/fltk-sys-1.4.25/cfltk/fltk/CMake"
+    buildResult:
+      variable: "HAVE_STDDEF_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-zyhmt7'
+        
+        Run Build Command(s): C:/PROGRA~1/CMake/bin/ninja.exe -v cmTC_c100d
+        [1/2] C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\HostX64\\x64\\cl.exe  /nologo   -nologo -MD -Brepro  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\\cmTC_c100d.dir\\CheckIncludeFile.c.obj /FdCMakeFiles\\cmTC_c100d.dir\\ /FS -c "C:\\Source Code\\electrostatic_datalogger\\target\\debug\\build\\fltk-sys-10fd0491c4b45d58\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-zyhmt7\\CheckIncludeFile.c"
+        cl : Command line warning D9025 : overriding '/MD' with '/MDd'
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_c100d.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_c100d.dir\\CheckIncludeFile.c.obj  /out:cmTC_c100d.exe /implib:cmTC_c100d.lib /pdb:cmTC_c100d.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckTypeSize.cmake:146 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckTypeSize.cmake:271 (__check_type_size_impl)"
+      - "fltk/CMake/setup.cmake:153 (CHECK_TYPE_SIZE)"
+      - "fltk/CMakeLists.txt:68 (include)"
+    checks:
+      - "Check size of short"
+    directories:
+      source: "C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-35nib3"
+      binary: "C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-35nib3"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -nologo -MD -Brepro"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/Shane/.cargo/registry/src/index.crates.io-6f17d22bba15001f/fltk-sys-1.4.25/cfltk/fltk/CMake"
+    buildResult:
+      variable: "HAVE_SIZEOF_SHORT"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-35nib3'
+        
+        Run Build Command(s): C:/PROGRA~1/CMake/bin/ninja.exe -v cmTC_0dfbe
+        [1/2] C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\HostX64\\x64\\cl.exe  /nologo   -nologo -MD -Brepro  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\\cmTC_0dfbe.dir\\SIZEOF_SHORT.c.obj /FdCMakeFiles\\cmTC_0dfbe.dir\\ /FS -c "C:\\Source Code\\electrostatic_datalogger\\target\\debug\\build\\fltk-sys-10fd0491c4b45d58\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-35nib3\\SIZEOF_SHORT.c"
+        cl : Command line warning D9025 : overriding '/MD' with '/MDd'
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_0dfbe.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_0dfbe.dir\\SIZEOF_SHORT.c.obj  /out:cmTC_0dfbe.exe /implib:cmTC_0dfbe.lib /pdb:cmTC_0dfbe.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckTypeSize.cmake:146 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckTypeSize.cmake:271 (__check_type_size_impl)"
+      - "fltk/CMake/setup.cmake:154 (CHECK_TYPE_SIZE)"
+      - "fltk/CMakeLists.txt:68 (include)"
+    checks:
+      - "Check size of int"
+    directories:
+      source: "C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-79p46r"
+      binary: "C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-79p46r"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -nologo -MD -Brepro"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/Shane/.cargo/registry/src/index.crates.io-6f17d22bba15001f/fltk-sys-1.4.25/cfltk/fltk/CMake"
+    buildResult:
+      variable: "HAVE_SIZEOF_INT"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-79p46r'
+        
+        Run Build Command(s): C:/PROGRA~1/CMake/bin/ninja.exe -v cmTC_ebd12
+        [1/2] C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\HostX64\\x64\\cl.exe  /nologo   -nologo -MD -Brepro  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\\cmTC_ebd12.dir\\SIZEOF_INT.c.obj /FdCMakeFiles\\cmTC_ebd12.dir\\ /FS -c "C:\\Source Code\\electrostatic_datalogger\\target\\debug\\build\\fltk-sys-10fd0491c4b45d58\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-79p46r\\SIZEOF_INT.c"
+        cl : Command line warning D9025 : overriding '/MD' with '/MDd'
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_ebd12.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_ebd12.dir\\SIZEOF_INT.c.obj  /out:cmTC_ebd12.exe /implib:cmTC_ebd12.lib /pdb:cmTC_ebd12.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckTypeSize.cmake:146 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckTypeSize.cmake:271 (__check_type_size_impl)"
+      - "fltk/CMake/setup.cmake:155 (CHECK_TYPE_SIZE)"
+      - "fltk/CMakeLists.txt:68 (include)"
+    checks:
+      - "Check size of long"
+    directories:
+      source: "C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-iv9nml"
+      binary: "C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-iv9nml"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -nologo -MD -Brepro"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/Shane/.cargo/registry/src/index.crates.io-6f17d22bba15001f/fltk-sys-1.4.25/cfltk/fltk/CMake"
+    buildResult:
+      variable: "HAVE_SIZEOF_LONG"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-iv9nml'
+        
+        Run Build Command(s): C:/PROGRA~1/CMake/bin/ninja.exe -v cmTC_edcda
+        [1/2] C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\HostX64\\x64\\cl.exe  /nologo   -nologo -MD -Brepro  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\\cmTC_edcda.dir\\SIZEOF_LONG.c.obj /FdCMakeFiles\\cmTC_edcda.dir\\ /FS -c "C:\\Source Code\\electrostatic_datalogger\\target\\debug\\build\\fltk-sys-10fd0491c4b45d58\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-iv9nml\\SIZEOF_LONG.c"
+        cl : Command line warning D9025 : overriding '/MD' with '/MDd'
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_edcda.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_edcda.dir\\SIZEOF_LONG.c.obj  /out:cmTC_edcda.exe /implib:cmTC_edcda.lib /pdb:cmTC_edcda.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckTypeSize.cmake:146 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckTypeSize.cmake:271 (__check_type_size_impl)"
+      - "fltk/CMake/setup.cmake:156 (CHECK_TYPE_SIZE)"
+      - "fltk/CMakeLists.txt:68 (include)"
+    checks:
+      - "Check size of long long"
+    directories:
+      source: "C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-0goz6q"
+      binary: "C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-0goz6q"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -nologo -MD -Brepro"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/Shane/.cargo/registry/src/index.crates.io-6f17d22bba15001f/fltk-sys-1.4.25/cfltk/fltk/CMake"
+    buildResult:
+      variable: "HAVE_HAVE_LONG_LONG"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-0goz6q'
+        
+        Run Build Command(s): C:/PROGRA~1/CMake/bin/ninja.exe -v cmTC_f6f40
+        [1/2] C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\HostX64\\x64\\cl.exe  /nologo   -nologo -MD -Brepro  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\\cmTC_f6f40.dir\\HAVE_LONG_LONG.c.obj /FdCMakeFiles\\cmTC_f6f40.dir\\ /FS -c "C:\\Source Code\\electrostatic_datalogger\\target\\debug\\build\\fltk-sys-10fd0491c4b45d58\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0goz6q\\HAVE_LONG_LONG.c"
+        cl : Command line warning D9025 : overriding '/MD' with '/MDd'
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_f6f40.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_f6f40.dir\\HAVE_LONG_LONG.c.obj  /out:cmTC_f6f40.exe /implib:cmTC_f6f40.lib /pdb:cmTC_f6f40.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckIncludeFiles.cmake:132 (try_compile)"
+      - "fltk/CMake/resources.cmake:32 (check_include_files)"
+      - "fltk/CMake/resources.cmake:56 (fl_find_header)"
+      - "fltk/CMakeLists.txt:73 (include)"
+    directories:
+      source: "C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-mmkbkf"
+      binary: "C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-mmkbkf"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -nologo -MD -Brepro"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/Shane/.cargo/registry/src/index.crates.io-6f17d22bba15001f/fltk-sys-1.4.25/cfltk/fltk/CMake"
+    buildResult:
+      variable: "HAVE_ALSA_ASOUNDLIB_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-mmkbkf'
+        
+        Run Build Command(s): C:/PROGRA~1/CMake/bin/ninja.exe -v cmTC_ce817
+        [1/2] C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\HostX64\\x64\\cl.exe  /nologo   -nologo -MD -Brepro  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\\cmTC_ce817.dir\\HAVE_ALSA_ASOUNDLIB_H.c.obj /FdCMakeFiles\\cmTC_ce817.dir\\ /FS -c "C:\\Source Code\\electrostatic_datalogger\\target\\debug\\build\\fltk-sys-10fd0491c4b45d58\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mmkbkf\\HAVE_ALSA_ASOUNDLIB_H.c"
+        FAILED: CMakeFiles/cmTC_ce817.dir/HAVE_ALSA_ASOUNDLIB_H.c.obj 
+        C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\HostX64\\x64\\cl.exe  /nologo   -nologo -MD -Brepro  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\\cmTC_ce817.dir\\HAVE_ALSA_ASOUNDLIB_H.c.obj /FdCMakeFiles\\cmTC_ce817.dir\\ /FS -c "C:\\Source Code\\electrostatic_datalogger\\target\\debug\\build\\fltk-sys-10fd0491c4b45d58\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mmkbkf\\HAVE_ALSA_ASOUNDLIB_H.c"
+        cl : Command line warning D9025 : overriding '/MD' with '/MDd'
+        C:\\Source Code\\electrostatic_datalogger\\target\\debug\\build\\fltk-sys-10fd0491c4b45d58\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mmkbkf\\HAVE_ALSA_ASOUNDLIB_H.c(2): fatal error C1083: Cannot open include file: 'alsa/asoundlib.h': No such file or directory
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckIncludeFiles.cmake:132 (try_compile)"
+      - "fltk/CMake/resources.cmake:32 (check_include_files)"
+      - "fltk/CMake/resources.cmake:57 (fl_find_header)"
+      - "fltk/CMakeLists.txt:73 (include)"
+    directories:
+      source: "C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-oe241i"
+      binary: "C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-oe241i"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -nologo -MD -Brepro"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/Shane/.cargo/registry/src/index.crates.io-6f17d22bba15001f/fltk-sys-1.4.25/cfltk/fltk/CMake"
+    buildResult:
+      variable: "HAVE_DLFCN_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-oe241i'
+        
+        Run Build Command(s): C:/PROGRA~1/CMake/bin/ninja.exe -v cmTC_15321
+        [1/2] C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\HostX64\\x64\\cl.exe  /nologo   -nologo -MD -Brepro  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\\cmTC_15321.dir\\HAVE_DLFCN_H.c.obj /FdCMakeFiles\\cmTC_15321.dir\\ /FS -c "C:\\Source Code\\electrostatic_datalogger\\target\\debug\\build\\fltk-sys-10fd0491c4b45d58\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-oe241i\\HAVE_DLFCN_H.c"
+        FAILED: CMakeFiles/cmTC_15321.dir/HAVE_DLFCN_H.c.obj 
+        C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\HostX64\\x64\\cl.exe  /nologo   -nologo -MD -Brepro  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\\cmTC_15321.dir\\HAVE_DLFCN_H.c.obj /FdCMakeFiles\\cmTC_15321.dir\\ /FS -c "C:\\Source Code\\electrostatic_datalogger\\target\\debug\\build\\fltk-sys-10fd0491c4b45d58\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-oe241i\\HAVE_DLFCN_H.c"
+        cl : Command line warning D9025 : overriding '/MD' with '/MDd'
+        C:\\Source Code\\electrostatic_datalogger\\target\\debug\\build\\fltk-sys-10fd0491c4b45d58\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-oe241i\\HAVE_DLFCN_H.c(2): fatal error C1083: Cannot open include file: 'dlfcn.h': No such file or directory
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckIncludeFiles.cmake:132 (try_compile)"
+      - "fltk/CMake/resources.cmake:32 (check_include_files)"
+      - "fltk/CMake/resources.cmake:58 (fl_find_header)"
+      - "fltk/CMakeLists.txt:73 (include)"
+    directories:
+      source: "C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-lo2liz"
+      binary: "C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-lo2liz"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -nologo -MD -Brepro"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/Shane/.cargo/registry/src/index.crates.io-6f17d22bba15001f/fltk-sys-1.4.25/cfltk/fltk/CMake"
+    buildResult:
+      variable: "HAVE_GL_GLU_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-lo2liz'
+        
+        Run Build Command(s): C:/PROGRA~1/CMake/bin/ninja.exe -v cmTC_4baa5
+        [1/2] C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\HostX64\\x64\\cl.exe  /nologo   -nologo -MD -Brepro  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\\cmTC_4baa5.dir\\HAVE_GL_GLU_H.c.obj /FdCMakeFiles\\cmTC_4baa5.dir\\ /FS -c "C:\\Source Code\\electrostatic_datalogger\\target\\debug\\build\\fltk-sys-10fd0491c4b45d58\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-lo2liz\\HAVE_GL_GLU_H.c"
+        FAILED: CMakeFiles/cmTC_4baa5.dir/HAVE_GL_GLU_H.c.obj 
+        C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\HostX64\\x64\\cl.exe  /nologo   -nologo -MD -Brepro  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\\cmTC_4baa5.dir\\HAVE_GL_GLU_H.c.obj /FdCMakeFiles\\cmTC_4baa5.dir\\ /FS -c "C:\\Source Code\\electrostatic_datalogger\\target\\debug\\build\\fltk-sys-10fd0491c4b45d58\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-lo2liz\\HAVE_GL_GLU_H.c"
+        cl : Command line warning D9025 : overriding '/MD' with '/MDd'
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1157): error C2054: expected '(' to follow 'WINGDIAPI'
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1157): error C2085: 'APIENTRY': not in formal parameter list
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1157): error C2146: syntax error: missing ',' before identifier 'glAccum'
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1157): error C2143: syntax error: missing ';' before '('
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1157): error C2059: syntax error: ')'
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1158): error C2054: expected '(' to follow 'WINGDIAPI'
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1158): error C2085: 'APIENTRY': not in formal parameter list
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1158): error C2146: syntax error: missing ',' before identifier 'glAlphaFunc'
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1158): error C2143: syntax error: missing ';' before '('
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1158): error C2059: syntax error: ')'
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1159): error C2054: expected '(' to follow 'WINGDIAPI'
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1159): error C2085: 'APIENTRY': not in formal parameter list
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1159): error C2146: syntax error: missing ',' before identifier 'glAreTexturesResident'
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1159): error C2143: syntax error: missing ';' before '('
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1159): error C2059: syntax error: ')'
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1160): error C2054: expected '(' to follow 'WINGDIAPI'
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1160): error C2085: 'APIENTRY': not in formal parameter list
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1160): error C2146: syntax error: missing ',' before identifier 'glArrayElement'
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1160): error C2143: syntax error: missing ';' before '('
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1160): error C2059: syntax error: ')'
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1161): error C2054: expected '(' to follow 'WINGDIAPI'
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1161): error C2085: 'APIENTRY': not in formal parameter list
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1161): error C2146: syntax error: missing ',' before identifier 'glBegin'
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1161): error C2143: syntax error: missing ';' before '('
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1161): error C2059: syntax error: ')'
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1162): error C2054: expected '(' to follow 'WINGDIAPI'
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1162): error C2085: 'APIENTRY': not in formal parameter list
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1162): error C2146: syntax error: missing ',' before identifier 'glBindTexture'
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1162): error C2143: syntax error: missing ';' before '('
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1162): error C2059: syntax error: ')'
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1163): error C2054: expected '(' to follow 'WINGDIAPI'
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1163): error C2085: 'APIENTRY': not in formal parameter list
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1163): error C2146: syntax error: missing ',' before identifier 'glBitmap'
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1163): error C2143: syntax error: missing ';' before '('
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1163): error C2059: syntax error: ')'
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1164): error C2054: expected '(' to follow 'WINGDIAPI'
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1164): error C2085: 'APIENTRY': not in formal parameter list
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1164): error C2146: syntax error: missing ',' before identifier 'glBlendFunc'
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1164): error C2143: syntax error: missing ';' before '('
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1164): error C2059: syntax error: ')'
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1165): error C2054: expected '(' to follow 'WINGDIAPI'
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1165): error C2085: 'APIENTRY': not in formal parameter list
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1165): error C2146: syntax error: missing ',' before identifier 'glCallList'
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1165): error C2143: syntax error: missing ';' before '('
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1165): error C2059: syntax error: ')'
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1166): error C2054: expected '(' to follow 'WINGDIAPI'
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1166): error C2085: 'APIENTRY': not in formal parameter list
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1166): error C2146: syntax error: missing ',' before identifier 'glCallLists'
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1166): error C2143: syntax error: missing ';' before '('
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1166): error C2059: syntax error: ')'
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1167): error C2054: expected '(' to follow 'WINGDIAPI'
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1167): error C2085: 'APIENTRY': not in formal parameter list
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1167): error C2146: syntax error: missing ',' before identifier 'glClear'
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1167): error C2143: syntax error: missing ';' before '('
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1167): error C2059: syntax error: ')'
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1168): error C2054: expected '(' to follow 'WINGDIAPI'
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1168): error C2085: 'APIENTRY': not in formal parameter list
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1168): error C2146: syntax error: missing ',' before identifier 'glClearAccum'
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1168): error C2143: syntax error: missing ';' before '('
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1168): error C2059: syntax error: ')'
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1169): error C2054: expected '(' to follow 'WINGDIAPI'
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1169): error C2085: 'APIENTRY': not in formal parameter list
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1169): error C2146: syntax error: missing ',' before identifier 'glClearColor'
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1169): error C2143: syntax error: missing ';' before '('
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1169): error C2059: syntax error: ')'
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1170): error C2054: expected '(' to follow 'WINGDIAPI'
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1170): error C2085: 'APIENTRY': not in formal parameter list
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1170): error C2146: syntax error: missing ',' before identifier 'glClearDepth'
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1170): error C2143: syntax error: missing ';' before '('
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1170): error C2059: syntax error: ')'
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1171): error C2054: expected '(' to follow 'WINGDIAPI'
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1171): error C2085: 'APIENTRY': not in formal parameter list
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1171): error C2146: syntax error: missing ',' before identifier 'glClearIndex'
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1171): error C2143: syntax error: missing ';' before '('
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1171): error C2059: syntax error: ')'
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1172): error C2054: expected '(' to follow 'WINGDIAPI'
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1172): error C2085: 'APIENTRY': not in formal parameter list
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1172): error C2146: syntax error: missing ',' before identifier 'glClearStencil'
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1172): error C2143: syntax error: missing ';' before '('
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1172): error C2059: syntax error: ')'
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1173): error C2054: expected '(' to follow 'WINGDIAPI'
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1173): error C2085: 'APIENTRY': not in formal parameter list
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1173): error C2146: syntax error: missing ',' before identifier 'glClipPlane'
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1173): error C2143: syntax error: missing ';' before '('
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1173): error C2059: syntax error: ')'
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1174): error C2054: expected '(' to follow 'WINGDIAPI'
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1174): error C2085: 'APIENTRY': not in formal parameter list
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1174): error C2146: syntax error: missing ',' before identifier 'glColor3b'
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1174): error C2143: syntax error: missing ';' before '('
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1174): error C2059: syntax error: ')'
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1175): error C2054: expected '(' to follow 'WINGDIAPI'
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1175): error C2085: 'APIENTRY': not in formal parameter list
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1175): error C2146: syntax error: missing ',' before identifier 'glColor3bv'
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1175): error C2143: syntax error: missing ';' before '('
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1175): error C2059: syntax error: ')'
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1176): error C2054: expected '(' to follow 'WINGDIAPI'
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1176): error C2085: 'APIENTRY': not in formal parameter list
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1176): error C2146: syntax error: missing ',' before identifier 'glColor3d'
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1176): error C2143: syntax error: missing ';' before '('
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1176): error C2059: syntax error: ')'
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1177): error C2054: expected '(' to follow 'WINGDIAPI'
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22000.0\\um\\GL/gl.h(1177): fatal error C1003: error count exceeds 100; stopping compilation
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckIncludeFiles.cmake:132 (try_compile)"
+      - "fltk/CMake/resources.cmake:32 (check_include_files)"
+      - "fltk/CMake/resources.cmake:59 (fl_find_header)"
+      - "fltk/CMakeLists.txt:73 (include)"
+    directories:
+      source: "C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-urfn34"
+      binary: "C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-urfn34"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -nologo -MD -Brepro"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/Shane/.cargo/registry/src/index.crates.io-6f17d22bba15001f/fltk-sys-1.4.25/cfltk/fltk/CMake"
+    buildResult:
+      variable: "HAVE_LOCALE_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-urfn34'
+        
+        Run Build Command(s): C:/PROGRA~1/CMake/bin/ninja.exe -v cmTC_2c389
+        [1/2] C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\HostX64\\x64\\cl.exe  /nologo   -nologo -MD -Brepro  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\\cmTC_2c389.dir\\HAVE_LOCALE_H.c.obj /FdCMakeFiles\\cmTC_2c389.dir\\ /FS -c "C:\\Source Code\\electrostatic_datalogger\\target\\debug\\build\\fltk-sys-10fd0491c4b45d58\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-urfn34\\HAVE_LOCALE_H.c"
+        cl : Command line warning D9025 : overriding '/MD' with '/MDd'
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_2c389.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_2c389.dir\\HAVE_LOCALE_H.c.obj  /out:cmTC_2c389.exe /implib:cmTC_2c389.lib /pdb:cmTC_2c389.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckIncludeFiles.cmake:132 (try_compile)"
+      - "fltk/CMake/resources.cmake:32 (check_include_files)"
+      - "fltk/CMake/resources.cmake:60 (fl_find_header)"
+      - "fltk/CMakeLists.txt:73 (include)"
+    directories:
+      source: "C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-5he6cx"
+      binary: "C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-5he6cx"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -nologo -MD -Brepro"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/Shane/.cargo/registry/src/index.crates.io-6f17d22bba15001f/fltk-sys-1.4.25/cfltk/fltk/CMake"
+    buildResult:
+      variable: "HAVE_OPENGL_GLU_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-5he6cx'
+        
+        Run Build Command(s): C:/PROGRA~1/CMake/bin/ninja.exe -v cmTC_e84d7
+        [1/2] C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\HostX64\\x64\\cl.exe  /nologo   -nologo -MD -Brepro  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\\cmTC_e84d7.dir\\HAVE_OPENGL_GLU_H.c.obj /FdCMakeFiles\\cmTC_e84d7.dir\\ /FS -c "C:\\Source Code\\electrostatic_datalogger\\target\\debug\\build\\fltk-sys-10fd0491c4b45d58\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-5he6cx\\HAVE_OPENGL_GLU_H.c"
+        FAILED: CMakeFiles/cmTC_e84d7.dir/HAVE_OPENGL_GLU_H.c.obj 
+        C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\HostX64\\x64\\cl.exe  /nologo   -nologo -MD -Brepro  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\\cmTC_e84d7.dir\\HAVE_OPENGL_GLU_H.c.obj /FdCMakeFiles\\cmTC_e84d7.dir\\ /FS -c "C:\\Source Code\\electrostatic_datalogger\\target\\debug\\build\\fltk-sys-10fd0491c4b45d58\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-5he6cx\\HAVE_OPENGL_GLU_H.c"
+        cl : Command line warning D9025 : overriding '/MD' with '/MDd'
+        C:\\Source Code\\electrostatic_datalogger\\target\\debug\\build\\fltk-sys-10fd0491c4b45d58\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-5he6cx\\HAVE_OPENGL_GLU_H.c(2): fatal error C1083: Cannot open include file: 'OpenGL/glu.h': No such file or directory
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckIncludeFiles.cmake:132 (try_compile)"
+      - "fltk/CMake/resources.cmake:32 (check_include_files)"
+      - "fltk/CMake/resources.cmake:61 (fl_find_header)"
+      - "fltk/CMakeLists.txt:73 (include)"
+    directories:
+      source: "C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-awgryq"
+      binary: "C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-awgryq"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -nologo -MD -Brepro"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/Shane/.cargo/registry/src/index.crates.io-6f17d22bba15001f/fltk-sys-1.4.25/cfltk/fltk/CMake"
+    buildResult:
+      variable: "HAVE_STDIO_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-awgryq'
+        
+        Run Build Command(s): C:/PROGRA~1/CMake/bin/ninja.exe -v cmTC_05ef0
+        [1/2] C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\HostX64\\x64\\cl.exe  /nologo   -nologo -MD -Brepro  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\\cmTC_05ef0.dir\\HAVE_STDIO_H.c.obj /FdCMakeFiles\\cmTC_05ef0.dir\\ /FS -c "C:\\Source Code\\electrostatic_datalogger\\target\\debug\\build\\fltk-sys-10fd0491c4b45d58\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-awgryq\\HAVE_STDIO_H.c"
+        cl : Command line warning D9025 : overriding '/MD' with '/MDd'
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_05ef0.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_05ef0.dir\\HAVE_STDIO_H.c.obj  /out:cmTC_05ef0.exe /implib:cmTC_05ef0.lib /pdb:cmTC_05ef0.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckIncludeFiles.cmake:132 (try_compile)"
+      - "fltk/CMake/resources.cmake:32 (check_include_files)"
+      - "fltk/CMake/resources.cmake:62 (fl_find_header)"
+      - "fltk/CMakeLists.txt:73 (include)"
+    directories:
+      source: "C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-34efe3"
+      binary: "C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-34efe3"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -nologo -MD -Brepro"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/Shane/.cargo/registry/src/index.crates.io-6f17d22bba15001f/fltk-sys-1.4.25/cfltk/fltk/CMake"
+    buildResult:
+      variable: "HAVE_STRINGS_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-34efe3'
+        
+        Run Build Command(s): C:/PROGRA~1/CMake/bin/ninja.exe -v cmTC_1e052
+        [1/2] C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\HostX64\\x64\\cl.exe  /nologo   -nologo -MD -Brepro  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\\cmTC_1e052.dir\\HAVE_STRINGS_H.c.obj /FdCMakeFiles\\cmTC_1e052.dir\\ /FS -c "C:\\Source Code\\electrostatic_datalogger\\target\\debug\\build\\fltk-sys-10fd0491c4b45d58\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-34efe3\\HAVE_STRINGS_H.c"
+        FAILED: CMakeFiles/cmTC_1e052.dir/HAVE_STRINGS_H.c.obj 
+        C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\HostX64\\x64\\cl.exe  /nologo   -nologo -MD -Brepro  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\\cmTC_1e052.dir\\HAVE_STRINGS_H.c.obj /FdCMakeFiles\\cmTC_1e052.dir\\ /FS -c "C:\\Source Code\\electrostatic_datalogger\\target\\debug\\build\\fltk-sys-10fd0491c4b45d58\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-34efe3\\HAVE_STRINGS_H.c"
+        cl : Command line warning D9025 : overriding '/MD' with '/MDd'
+        C:\\Source Code\\electrostatic_datalogger\\target\\debug\\build\\fltk-sys-10fd0491c4b45d58\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-34efe3\\HAVE_STRINGS_H.c(2): fatal error C1083: Cannot open include file: 'strings.h': No such file or directory
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckIncludeFiles.cmake:132 (try_compile)"
+      - "fltk/CMake/resources.cmake:32 (check_include_files)"
+      - "fltk/CMake/resources.cmake:63 (fl_find_header)"
+      - "fltk/CMakeLists.txt:73 (include)"
+    directories:
+      source: "C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-u32acy"
+      binary: "C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-u32acy"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -nologo -MD -Brepro"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/Shane/.cargo/registry/src/index.crates.io-6f17d22bba15001f/fltk-sys-1.4.25/cfltk/fltk/CMake"
+    buildResult:
+      variable: "HAVE_SYS_SELECT_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-u32acy'
+        
+        Run Build Command(s): C:/PROGRA~1/CMake/bin/ninja.exe -v cmTC_e1ca3
+        [1/2] C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\HostX64\\x64\\cl.exe  /nologo   -nologo -MD -Brepro  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\\cmTC_e1ca3.dir\\HAVE_SYS_SELECT_H.c.obj /FdCMakeFiles\\cmTC_e1ca3.dir\\ /FS -c "C:\\Source Code\\electrostatic_datalogger\\target\\debug\\build\\fltk-sys-10fd0491c4b45d58\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-u32acy\\HAVE_SYS_SELECT_H.c"
+        FAILED: CMakeFiles/cmTC_e1ca3.dir/HAVE_SYS_SELECT_H.c.obj 
+        C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\HostX64\\x64\\cl.exe  /nologo   -nologo -MD -Brepro  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\\cmTC_e1ca3.dir\\HAVE_SYS_SELECT_H.c.obj /FdCMakeFiles\\cmTC_e1ca3.dir\\ /FS -c "C:\\Source Code\\electrostatic_datalogger\\target\\debug\\build\\fltk-sys-10fd0491c4b45d58\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-u32acy\\HAVE_SYS_SELECT_H.c"
+        cl : Command line warning D9025 : overriding '/MD' with '/MDd'
+        C:\\Source Code\\electrostatic_datalogger\\target\\debug\\build\\fltk-sys-10fd0491c4b45d58\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-u32acy\\HAVE_SYS_SELECT_H.c(2): fatal error C1083: Cannot open include file: 'sys/select.h': No such file or directory
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckIncludeFiles.cmake:132 (try_compile)"
+      - "fltk/CMake/resources.cmake:32 (check_include_files)"
+      - "fltk/CMake/resources.cmake:64 (fl_find_header)"
+      - "fltk/CMakeLists.txt:73 (include)"
+    directories:
+      source: "C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-iqegzf"
+      binary: "C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-iqegzf"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -nologo -MD -Brepro"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/Shane/.cargo/registry/src/index.crates.io-6f17d22bba15001f/fltk-sys-1.4.25/cfltk/fltk/CMake"
+    buildResult:
+      variable: "HAVE_SYS_STDTYPES_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-iqegzf'
+        
+        Run Build Command(s): C:/PROGRA~1/CMake/bin/ninja.exe -v cmTC_38cf5
+        [1/2] C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\HostX64\\x64\\cl.exe  /nologo   -nologo -MD -Brepro  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\\cmTC_38cf5.dir\\HAVE_SYS_STDTYPES_H.c.obj /FdCMakeFiles\\cmTC_38cf5.dir\\ /FS -c "C:\\Source Code\\electrostatic_datalogger\\target\\debug\\build\\fltk-sys-10fd0491c4b45d58\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-iqegzf\\HAVE_SYS_STDTYPES_H.c"
+        FAILED: CMakeFiles/cmTC_38cf5.dir/HAVE_SYS_STDTYPES_H.c.obj 
+        C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\HostX64\\x64\\cl.exe  /nologo   -nologo -MD -Brepro  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\\cmTC_38cf5.dir\\HAVE_SYS_STDTYPES_H.c.obj /FdCMakeFiles\\cmTC_38cf5.dir\\ /FS -c "C:\\Source Code\\electrostatic_datalogger\\target\\debug\\build\\fltk-sys-10fd0491c4b45d58\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-iqegzf\\HAVE_SYS_STDTYPES_H.c"
+        cl : Command line warning D9025 : overriding '/MD' with '/MDd'
+        C:\\Source Code\\electrostatic_datalogger\\target\\debug\\build\\fltk-sys-10fd0491c4b45d58\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-iqegzf\\HAVE_SYS_STDTYPES_H.c(2): fatal error C1083: Cannot open include file: 'sys/stdtypes.h': No such file or directory
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckIncludeFiles.cmake:132 (try_compile)"
+      - "fltk/CMake/resources.cmake:32 (check_include_files)"
+      - "fltk/CMake/resources.cmake:66 (fl_find_header)"
+      - "fltk/CMakeLists.txt:73 (include)"
+    directories:
+      source: "C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-ae0ozk"
+      binary: "C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-ae0ozk"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -nologo -MD -Brepro"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/Shane/.cargo/registry/src/index.crates.io-6f17d22bba15001f/fltk-sys-1.4.25/cfltk/fltk/CMake"
+    buildResult:
+      variable: "HAVE_X11_XREGION_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-ae0ozk'
+        
+        Run Build Command(s): C:/PROGRA~1/CMake/bin/ninja.exe -v cmTC_c1632
+        [1/2] C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\HostX64\\x64\\cl.exe  /nologo   -nologo -MD -Brepro  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\\cmTC_c1632.dir\\HAVE_X11_XREGION_H.c.obj /FdCMakeFiles\\cmTC_c1632.dir\\ /FS -c "C:\\Source Code\\electrostatic_datalogger\\target\\debug\\build\\fltk-sys-10fd0491c4b45d58\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ae0ozk\\HAVE_X11_XREGION_H.c"
+        FAILED: CMakeFiles/cmTC_c1632.dir/HAVE_X11_XREGION_H.c.obj 
+        C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\HostX64\\x64\\cl.exe  /nologo   -nologo -MD -Brepro  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\\cmTC_c1632.dir\\HAVE_X11_XREGION_H.c.obj /FdCMakeFiles\\cmTC_c1632.dir\\ /FS -c "C:\\Source Code\\electrostatic_datalogger\\target\\debug\\build\\fltk-sys-10fd0491c4b45d58\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ae0ozk\\HAVE_X11_XREGION_H.c"
+        cl : Command line warning D9025 : overriding '/MD' with '/MDd'
+        C:\\Source Code\\electrostatic_datalogger\\target\\debug\\build\\fltk-sys-10fd0491c4b45d58\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ae0ozk\\HAVE_X11_XREGION_H.c(2): fatal error C1083: Cannot open include file: 'X11/Xlib.h': No such file or directory
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckIncludeFiles.cmake:132 (try_compile)"
+      - "fltk/CMake/resources.cmake:32 (check_include_files)"
+      - "fltk/CMake/resources.cmake:119 (fl_find_header)"
+      - "fltk/CMakeLists.txt:73 (include)"
+    directories:
+      source: "C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-advuly"
+      binary: "C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-advuly"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -nologo -MD -Brepro"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/Shane/.cargo/registry/src/index.crates.io-6f17d22bba15001f/fltk-sys-1.4.25/cfltk/fltk/CMake"
+    buildResult:
+      variable: "HAVE_DIRENT_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-advuly'
+        
+        Run Build Command(s): C:/PROGRA~1/CMake/bin/ninja.exe -v cmTC_892f0
+        [1/2] C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\HostX64\\x64\\cl.exe  /nologo   -nologo -MD -Brepro  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\\cmTC_892f0.dir\\HAVE_DIRENT_H.c.obj /FdCMakeFiles\\cmTC_892f0.dir\\ /FS -c "C:\\Source Code\\electrostatic_datalogger\\target\\debug\\build\\fltk-sys-10fd0491c4b45d58\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-advuly\\HAVE_DIRENT_H.c"
+        FAILED: CMakeFiles/cmTC_892f0.dir/HAVE_DIRENT_H.c.obj 
+        C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\HostX64\\x64\\cl.exe  /nologo   -nologo -MD -Brepro  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\\cmTC_892f0.dir\\HAVE_DIRENT_H.c.obj /FdCMakeFiles\\cmTC_892f0.dir\\ /FS -c "C:\\Source Code\\electrostatic_datalogger\\target\\debug\\build\\fltk-sys-10fd0491c4b45d58\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-advuly\\HAVE_DIRENT_H.c"
+        cl : Command line warning D9025 : overriding '/MD' with '/MDd'
+        C:\\Source Code\\electrostatic_datalogger\\target\\debug\\build\\fltk-sys-10fd0491c4b45d58\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-advuly\\HAVE_DIRENT_H.c(2): fatal error C1083: Cannot open include file: 'dirent.h': No such file or directory
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckIncludeFiles.cmake:132 (try_compile)"
+      - "fltk/CMake/resources.cmake:32 (check_include_files)"
+      - "fltk/CMake/resources.cmake:122 (fl_find_header)"
+      - "fltk/CMakeLists.txt:73 (include)"
+    directories:
+      source: "C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-0e3jdt"
+      binary: "C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-0e3jdt"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -nologo -MD -Brepro"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/Shane/.cargo/registry/src/index.crates.io-6f17d22bba15001f/fltk-sys-1.4.25/cfltk/fltk/CMake"
+    buildResult:
+      variable: "HAVE_SYS_NDIR_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-0e3jdt'
+        
+        Run Build Command(s): C:/PROGRA~1/CMake/bin/ninja.exe -v cmTC_9b750
+        [1/2] C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\HostX64\\x64\\cl.exe  /nologo   -nologo -MD -Brepro  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\\cmTC_9b750.dir\\HAVE_SYS_NDIR_H.c.obj /FdCMakeFiles\\cmTC_9b750.dir\\ /FS -c "C:\\Source Code\\electrostatic_datalogger\\target\\debug\\build\\fltk-sys-10fd0491c4b45d58\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0e3jdt\\HAVE_SYS_NDIR_H.c"
+        FAILED: CMakeFiles/cmTC_9b750.dir/HAVE_SYS_NDIR_H.c.obj 
+        C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\HostX64\\x64\\cl.exe  /nologo   -nologo -MD -Brepro  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\\cmTC_9b750.dir\\HAVE_SYS_NDIR_H.c.obj /FdCMakeFiles\\cmTC_9b750.dir\\ /FS -c "C:\\Source Code\\electrostatic_datalogger\\target\\debug\\build\\fltk-sys-10fd0491c4b45d58\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0e3jdt\\HAVE_SYS_NDIR_H.c"
+        cl : Command line warning D9025 : overriding '/MD' with '/MDd'
+        C:\\Source Code\\electrostatic_datalogger\\target\\debug\\build\\fltk-sys-10fd0491c4b45d58\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0e3jdt\\HAVE_SYS_NDIR_H.c(2): fatal error C1083: Cannot open include file: 'sys/ndir.h': No such file or directory
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckIncludeFiles.cmake:132 (try_compile)"
+      - "fltk/CMake/resources.cmake:32 (check_include_files)"
+      - "fltk/CMake/resources.cmake:124 (fl_find_header)"
+      - "fltk/CMakeLists.txt:73 (include)"
+    directories:
+      source: "C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-06jofz"
+      binary: "C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-06jofz"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -nologo -MD -Brepro"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/Shane/.cargo/registry/src/index.crates.io-6f17d22bba15001f/fltk-sys-1.4.25/cfltk/fltk/CMake"
+    buildResult:
+      variable: "HAVE_SYS_DIR_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-06jofz'
+        
+        Run Build Command(s): C:/PROGRA~1/CMake/bin/ninja.exe -v cmTC_7ba80
+        [1/2] C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\HostX64\\x64\\cl.exe  /nologo   -nologo -MD -Brepro  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\\cmTC_7ba80.dir\\HAVE_SYS_DIR_H.c.obj /FdCMakeFiles\\cmTC_7ba80.dir\\ /FS -c "C:\\Source Code\\electrostatic_datalogger\\target\\debug\\build\\fltk-sys-10fd0491c4b45d58\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-06jofz\\HAVE_SYS_DIR_H.c"
+        FAILED: CMakeFiles/cmTC_7ba80.dir/HAVE_SYS_DIR_H.c.obj 
+        C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\HostX64\\x64\\cl.exe  /nologo   -nologo -MD -Brepro  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\\cmTC_7ba80.dir\\HAVE_SYS_DIR_H.c.obj /FdCMakeFiles\\cmTC_7ba80.dir\\ /FS -c "C:\\Source Code\\electrostatic_datalogger\\target\\debug\\build\\fltk-sys-10fd0491c4b45d58\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-06jofz\\HAVE_SYS_DIR_H.c"
+        cl : Command line warning D9025 : overriding '/MD' with '/MDd'
+        C:\\Source Code\\electrostatic_datalogger\\target\\debug\\build\\fltk-sys-10fd0491c4b45d58\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-06jofz\\HAVE_SYS_DIR_H.c(2): fatal error C1083: Cannot open include file: 'sys/dir.h': No such file or directory
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckIncludeFiles.cmake:132 (try_compile)"
+      - "fltk/CMake/resources.cmake:32 (check_include_files)"
+      - "fltk/CMake/resources.cmake:126 (fl_find_header)"
+      - "fltk/CMakeLists.txt:73 (include)"
+    directories:
+      source: "C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-e4uhq4"
+      binary: "C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-e4uhq4"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -nologo -MD -Brepro"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/Shane/.cargo/registry/src/index.crates.io-6f17d22bba15001f/fltk-sys-1.4.25/cfltk/fltk/CMake"
+    buildResult:
+      variable: "HAVE_NDIR_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-e4uhq4'
+        
+        Run Build Command(s): C:/PROGRA~1/CMake/bin/ninja.exe -v cmTC_2d255
+        [1/2] C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\HostX64\\x64\\cl.exe  /nologo   -nologo -MD -Brepro  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\\cmTC_2d255.dir\\HAVE_NDIR_H.c.obj /FdCMakeFiles\\cmTC_2d255.dir\\ /FS -c "C:\\Source Code\\electrostatic_datalogger\\target\\debug\\build\\fltk-sys-10fd0491c4b45d58\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-e4uhq4\\HAVE_NDIR_H.c"
+        FAILED: CMakeFiles/cmTC_2d255.dir/HAVE_NDIR_H.c.obj 
+        C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\HostX64\\x64\\cl.exe  /nologo   -nologo -MD -Brepro  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\\cmTC_2d255.dir\\HAVE_NDIR_H.c.obj /FdCMakeFiles\\cmTC_2d255.dir\\ /FS -c "C:\\Source Code\\electrostatic_datalogger\\target\\debug\\build\\fltk-sys-10fd0491c4b45d58\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-e4uhq4\\HAVE_NDIR_H.c"
+        cl : Command line warning D9025 : overriding '/MD' with '/MDd'
+        C:\\Source Code\\electrostatic_datalogger\\target\\debug\\build\\fltk-sys-10fd0491c4b45d58\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-e4uhq4\\HAVE_NDIR_H.c(2): fatal error C1083: Cannot open include file: 'ndir.h': No such file or directory
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckFunctionExists.cmake:86 (try_compile)"
+      - "fltk/CMake/resources.cmake:181 (CHECK_FUNCTION_EXISTS)"
+      - "fltk/CMakeLists.txt:73 (include)"
+    directories:
+      source: "C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-l48jrj"
+      binary: "C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-l48jrj"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -nologo -MD -Brepro"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/Shane/.cargo/registry/src/index.crates.io-6f17d22bba15001f/fltk-sys-1.4.25/cfltk/fltk/CMake"
+    buildResult:
+      variable: "HAVE_DLSYM"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-l48jrj'
+        
+        Run Build Command(s): C:/PROGRA~1/CMake/bin/ninja.exe -v cmTC_75f02
+        [1/2] C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\HostX64\\x64\\cl.exe  /nologo   -nologo -MD -Brepro -DCHECK_FUNCTION_EXISTS=dlsym /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\\cmTC_75f02.dir\\CheckFunctionExists.c.obj /FdCMakeFiles\\cmTC_75f02.dir\\ /FS -c "C:\\Source Code\\electrostatic_datalogger\\target\\debug\\build\\fltk-sys-10fd0491c4b45d58\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-l48jrj\\CheckFunctionExists.c"
+        cl : Command line warning D9025 : overriding '/MD' with '/MDd'
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_75f02.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_75f02.dir\\CheckFunctionExists.c.obj  /out:cmTC_75f02.exe /implib:cmTC_75f02.lib /pdb:cmTC_75f02.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        FAILED: cmTC_75f02.exe 
+        C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_75f02.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_75f02.dir\\CheckFunctionExists.c.obj  /out:cmTC_75f02.exe /implib:cmTC_75f02.lib /pdb:cmTC_75f02.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        LINK Pass 1: command "C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_75f02.dir\\CheckFunctionExists.c.obj /out:cmTC_75f02.exe /implib:cmTC_75f02.lib /pdb:cmTC_75f02.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_75f02.dir/intermediate.manifest CMakeFiles\\cmTC_75f02.dir/manifest.res" failed (exit code 1120) with the following output:
+        CheckFunctionExists.c.obj : error LNK2019: unresolved external symbol dlsym referenced in function main\x0d
+        cmTC_75f02.exe : fatal error LNK1120: 1 unresolved externals\x0d
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckFunctionExists.cmake:86 (try_compile)"
+      - "fltk/CMake/resources.cmake:184 (CHECK_FUNCTION_EXISTS)"
+      - "fltk/CMakeLists.txt:73 (include)"
+    directories:
+      source: "C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-vpsx96"
+      binary: "C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-vpsx96"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -nologo -MD -Brepro"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/Shane/.cargo/registry/src/index.crates.io-6f17d22bba15001f/fltk-sys-1.4.25/cfltk/fltk/CMake"
+    buildResult:
+      variable: "HAVE_LOCALECONV"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-vpsx96'
+        
+        Run Build Command(s): C:/PROGRA~1/CMake/bin/ninja.exe -v cmTC_62d55
+        [1/2] C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\HostX64\\x64\\cl.exe  /nologo   -nologo -MD -Brepro -DCHECK_FUNCTION_EXISTS=localeconv /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\\cmTC_62d55.dir\\CheckFunctionExists.c.obj /FdCMakeFiles\\cmTC_62d55.dir\\ /FS -c "C:\\Source Code\\electrostatic_datalogger\\target\\debug\\build\\fltk-sys-10fd0491c4b45d58\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-vpsx96\\CheckFunctionExists.c"
+        cl : Command line warning D9025 : overriding '/MD' with '/MDd'
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_62d55.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_62d55.dir\\CheckFunctionExists.c.obj  /out:cmTC_62d55.exe /implib:cmTC_62d55.lib /pdb:cmTC_62d55.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckFunctionExists.cmake:86 (try_compile)"
+      - "fltk/CMake/resources.cmake:193 (CHECK_FUNCTION_EXISTS)"
+      - "fltk/CMakeLists.txt:73 (include)"
+    directories:
+      source: "C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-f784p7"
+      binary: "C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-f784p7"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -nologo -MD -Brepro"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/Shane/.cargo/registry/src/index.crates.io-6f17d22bba15001f/fltk-sys-1.4.25/cfltk/fltk/CMake"
+    buildResult:
+      variable: "HAVE_SCANDIR"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-f784p7'
+        
+        Run Build Command(s): C:/PROGRA~1/CMake/bin/ninja.exe -v cmTC_57468
+        [1/2] C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\HostX64\\x64\\cl.exe  /nologo   -nologo -MD -Brepro -DCHECK_FUNCTION_EXISTS=scandir /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\\cmTC_57468.dir\\CheckFunctionExists.c.obj /FdCMakeFiles\\cmTC_57468.dir\\ /FS -c "C:\\Source Code\\electrostatic_datalogger\\target\\debug\\build\\fltk-sys-10fd0491c4b45d58\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-f784p7\\CheckFunctionExists.c"
+        cl : Command line warning D9025 : overriding '/MD' with '/MDd'
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_57468.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_57468.dir\\CheckFunctionExists.c.obj  /out:cmTC_57468.exe /implib:cmTC_57468.lib /pdb:cmTC_57468.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        FAILED: cmTC_57468.exe 
+        C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_57468.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_57468.dir\\CheckFunctionExists.c.obj  /out:cmTC_57468.exe /implib:cmTC_57468.lib /pdb:cmTC_57468.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        LINK Pass 1: command "C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_57468.dir\\CheckFunctionExists.c.obj /out:cmTC_57468.exe /implib:cmTC_57468.lib /pdb:cmTC_57468.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_57468.dir/intermediate.manifest CMakeFiles\\cmTC_57468.dir/manifest.res" failed (exit code 1120) with the following output:
+        CheckFunctionExists.c.obj : error LNK2019: unresolved external symbol scandir referenced in function main\x0d
+        cmTC_57468.exe : fatal error LNK1120: 1 unresolved externals\x0d
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckFunctionExists.cmake:86 (try_compile)"
+      - "fltk/CMake/resources.cmake:194 (CHECK_FUNCTION_EXISTS)"
+      - "fltk/CMakeLists.txt:73 (include)"
+    directories:
+      source: "C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-quaexo"
+      binary: "C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-quaexo"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -nologo -MD -Brepro"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/Shane/.cargo/registry/src/index.crates.io-6f17d22bba15001f/fltk-sys-1.4.25/cfltk/fltk/CMake"
+    buildResult:
+      variable: "HAVE_SNPRINTF"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-quaexo'
+        
+        Run Build Command(s): C:/PROGRA~1/CMake/bin/ninja.exe -v cmTC_a3302
+        [1/2] C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\HostX64\\x64\\cl.exe  /nologo   -nologo -MD -Brepro -DCHECK_FUNCTION_EXISTS=snprintf /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\\cmTC_a3302.dir\\CheckFunctionExists.c.obj /FdCMakeFiles\\cmTC_a3302.dir\\ /FS -c "C:\\Source Code\\electrostatic_datalogger\\target\\debug\\build\\fltk-sys-10fd0491c4b45d58\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-quaexo\\CheckFunctionExists.c"
+        cl : Command line warning D9025 : overriding '/MD' with '/MDd'
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_a3302.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_a3302.dir\\CheckFunctionExists.c.obj  /out:cmTC_a3302.exe /implib:cmTC_a3302.lib /pdb:cmTC_a3302.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        FAILED: cmTC_a3302.exe 
+        C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_a3302.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_a3302.dir\\CheckFunctionExists.c.obj  /out:cmTC_a3302.exe /implib:cmTC_a3302.lib /pdb:cmTC_a3302.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        LINK Pass 1: command "C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_a3302.dir\\CheckFunctionExists.c.obj /out:cmTC_a3302.exe /implib:cmTC_a3302.lib /pdb:cmTC_a3302.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_a3302.dir/intermediate.manifest CMakeFiles\\cmTC_a3302.dir/manifest.res" failed (exit code 1120) with the following output:
+        CheckFunctionExists.c.obj : error LNK2019: unresolved external symbol snprintf referenced in function main\x0d
+        cmTC_a3302.exe : fatal error LNK1120: 1 unresolved externals\x0d
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckFunctionExists.cmake:86 (try_compile)"
+      - "fltk/CMake/resources.cmake:203 (CHECK_FUNCTION_EXISTS)"
+      - "fltk/CMakeLists.txt:73 (include)"
+    directories:
+      source: "C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-0iroeo"
+      binary: "C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-0iroeo"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -nologo -MD -Brepro"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/Shane/.cargo/registry/src/index.crates.io-6f17d22bba15001f/fltk-sys-1.4.25/cfltk/fltk/CMake"
+    buildResult:
+      variable: "HAVE_STRLCAT"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-0iroeo'
+        
+        Run Build Command(s): C:/PROGRA~1/CMake/bin/ninja.exe -v cmTC_e7582
+        [1/2] C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\HostX64\\x64\\cl.exe  /nologo   -nologo -MD -Brepro -DCHECK_FUNCTION_EXISTS=strlcat /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\\cmTC_e7582.dir\\CheckFunctionExists.c.obj /FdCMakeFiles\\cmTC_e7582.dir\\ /FS -c "C:\\Source Code\\electrostatic_datalogger\\target\\debug\\build\\fltk-sys-10fd0491c4b45d58\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0iroeo\\CheckFunctionExists.c"
+        cl : Command line warning D9025 : overriding '/MD' with '/MDd'
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_e7582.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_e7582.dir\\CheckFunctionExists.c.obj  /out:cmTC_e7582.exe /implib:cmTC_e7582.lib /pdb:cmTC_e7582.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        FAILED: cmTC_e7582.exe 
+        C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_e7582.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_e7582.dir\\CheckFunctionExists.c.obj  /out:cmTC_e7582.exe /implib:cmTC_e7582.lib /pdb:cmTC_e7582.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        LINK Pass 1: command "C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_e7582.dir\\CheckFunctionExists.c.obj /out:cmTC_e7582.exe /implib:cmTC_e7582.lib /pdb:cmTC_e7582.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_e7582.dir/intermediate.manifest CMakeFiles\\cmTC_e7582.dir/manifest.res" failed (exit code 1120) with the following output:
+        CheckFunctionExists.c.obj : error LNK2019: unresolved external symbol strlcat referenced in function main\x0d
+        cmTC_e7582.exe : fatal error LNK1120: 1 unresolved externals\x0d
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckFunctionExists.cmake:86 (try_compile)"
+      - "fltk/CMake/resources.cmake:204 (CHECK_FUNCTION_EXISTS)"
+      - "fltk/CMakeLists.txt:73 (include)"
+    directories:
+      source: "C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-orhxex"
+      binary: "C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-orhxex"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -nologo -MD -Brepro"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/Shane/.cargo/registry/src/index.crates.io-6f17d22bba15001f/fltk-sys-1.4.25/cfltk/fltk/CMake"
+    buildResult:
+      variable: "HAVE_STRLCPY"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-orhxex'
+        
+        Run Build Command(s): C:/PROGRA~1/CMake/bin/ninja.exe -v cmTC_79bb3
+        [1/2] C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\HostX64\\x64\\cl.exe  /nologo   -nologo -MD -Brepro -DCHECK_FUNCTION_EXISTS=strlcpy /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\\cmTC_79bb3.dir\\CheckFunctionExists.c.obj /FdCMakeFiles\\cmTC_79bb3.dir\\ /FS -c "C:\\Source Code\\electrostatic_datalogger\\target\\debug\\build\\fltk-sys-10fd0491c4b45d58\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-orhxex\\CheckFunctionExists.c"
+        cl : Command line warning D9025 : overriding '/MD' with '/MDd'
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_79bb3.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_79bb3.dir\\CheckFunctionExists.c.obj  /out:cmTC_79bb3.exe /implib:cmTC_79bb3.lib /pdb:cmTC_79bb3.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        FAILED: cmTC_79bb3.exe 
+        C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_79bb3.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_79bb3.dir\\CheckFunctionExists.c.obj  /out:cmTC_79bb3.exe /implib:cmTC_79bb3.lib /pdb:cmTC_79bb3.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        LINK Pass 1: command "C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_79bb3.dir\\CheckFunctionExists.c.obj /out:cmTC_79bb3.exe /implib:cmTC_79bb3.lib /pdb:cmTC_79bb3.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_79bb3.dir/intermediate.manifest CMakeFiles\\cmTC_79bb3.dir/manifest.res" failed (exit code 1120) with the following output:
+        CheckFunctionExists.c.obj : error LNK2019: unresolved external symbol strlcpy referenced in function main\x0d
+        cmTC_79bb3.exe : fatal error LNK1120: 1 unresolved externals\x0d
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckFunctionExists.cmake:86 (try_compile)"
+      - "fltk/CMake/resources.cmake:205 (CHECK_FUNCTION_EXISTS)"
+      - "fltk/CMakeLists.txt:73 (include)"
+    directories:
+      source: "C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-9o42lj"
+      binary: "C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-9o42lj"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -nologo -MD -Brepro"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/Shane/.cargo/registry/src/index.crates.io-6f17d22bba15001f/fltk-sys-1.4.25/cfltk/fltk/CMake"
+    buildResult:
+      variable: "HAVE_VSNPRINTF"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Source Code/electrostatic_datalogger/target/debug/build/fltk-sys-10fd0491c4b45d58/out/build/CMakeFiles/CMakeScratch/TryCompile-9o42lj'
+        
+        Run Build Command(s): C:/PROGRA~1/CMake/bin/ninja.exe -v cmTC_f6a09
+        [1/2] C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\HostX64\\x64\\cl.exe  /nologo   -nologo -MD -Brepro -DCHECK_FUNCTION_EXISTS=vsnprintf /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\\cmTC_f6a09.dir\\CheckFunctionExists.c.obj /FdCMakeFiles\\cmTC_f6a09.dir\\ /FS -c "C:\\Source Code\\electrostatic_datalogger\\target\\debug\\build\\fltk-sys-10fd0491c4b45d58\\out\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9o42lj\\CheckFunctionExists.c"
+        cl : Command line warning D9025 : overriding '/MD' with '/MDd'
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_f6a09.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_f6a09.dir\\CheckFunctionExists.c.obj  /out:cmTC_f6a09.exe /implib:cmTC_f6a09.lib /pdb:cmTC_f6a09.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        FAILED: cmTC_f6a09.exe 
+        C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_f6a09.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_f6a09.dir\\CheckFunctionExists.c.obj  /out:cmTC_f6a09.exe /implib:cmTC_f6a09.lib /pdb:cmTC_f6a09.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        LINK Pass 1: command "C:\\PROGRA~1\\MICROS~2\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_f6a09.dir\\CheckFunctionExists.c.obj /out:cmTC_f6a09.exe /implib:cmTC_f6a09.lib /pdb:cmTC_f6a09.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_f6a09.dir/intermediate.manifest CMakeFiles\\cmTC_f6a09.dir/manifest.res" failed (exit code 1120) with the following output:
+        CheckFunctionExists.c.obj : error LNK2019: unresolved external symbol vsnprintf referenced in function main
+        MSVCRTD.lib(vsnprintf.obj) : error LNK2001: unresolved external symbol vsnprintf
+        MSVCRTD.lib(vsnprintf.obj) : error LNK2001: unresolved external symbol _vsnprintf
+        cmTC_f6a09.exe : fatal error LNK1120: 2 unresolved externals\x0d
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+...
