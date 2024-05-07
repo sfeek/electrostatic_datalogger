@@ -22,7 +22,6 @@ struct CValues {
     c4: i32,
 }
 
-
 #[derive(Debug, Deserialize)]
 struct OneLineTimeStamp {
     dt: String,
@@ -58,10 +57,11 @@ fn main() {
     // Output and Com Port text boxes
     let mut output: SimpleTerminal = SimpleTerminal::new(10, 10, 385, 400, "");
     let mut frame: Frame = Frame::new(405, 10, 385, 400, "");
-    let mut com_port: InputChoice = InputChoice::new(350, 420, 80, 30, "COM Port");
+    let mut com_port: InputChoice = InputChoice::new(200, 420, 80, 30, "COM Port");
 
     frame.set_frame(FrameType::EmbossedFrame);
 
+    // Attributes for the terminal window
     output.set_stay_at_bottom(true);
     output.set_ansi(false);
     output.set_cursor_style(Cursor::Normal);
@@ -126,7 +126,9 @@ fn start(
     stop_button: &mut Button,
     file_button: &mut Button,
 ) {
+    // How many records for calibration, 2 records for every second
     let ctime = 30;
+
     // Set thread status to running
     *running.write().unwrap() = 1;
 
@@ -137,7 +139,7 @@ fn start(
         return;
     }
 
-    // Toggle the start/stop buttons
+    // Toggle the start/stop/file buttons
     start_button.deactivate();
     stop_button.activate();
     file_button.deactivate();
@@ -145,6 +147,7 @@ fn start(
     // Make a clone of the thread status for the sub thread
     let running = Arc::clone(&running);
 
+    // Place to store averages from calibration
     let mut avg = CValues {
         c1: 0,
         c2: 0,
@@ -228,6 +231,7 @@ fn start(
             }
         }
 
+        // Let the user know that calibration is started
         out_handle.append(&format!("\n*** Calibration Started ***\n"));
 
         // Read data and write to window and file
@@ -256,6 +260,7 @@ fn start(
                                                 // Add one to the record count
                                                 count += 1;
 
+                                                // Get timestamp from OS
                                                 let mut time_stamp: Vec<u8> = Local::now()
                                                     .format("%Y-%m-%d,%H:%M:%S")
                                                     .to_string()
@@ -279,7 +284,7 @@ fn start(
                                                     file_csv_values = result.unwrap();
                                                 }
 
-                                                // Send to display window
+                                                // Send calibration data to display window
                                                 if count < ctime {
                                                     out_handle.append(&format!(
                                                         "{} {} {} {} {}\n",
@@ -297,15 +302,15 @@ fn start(
                                                 c.c3 += file_csv_values.v3;
                                                 c.c4 += file_csv_values.v4;
 
-                                                // Check to see if we have 30 readings and switch to logging mode
+                                                // Check to see if we have correct number of readings and switch to logging mode
                                                 if count == ctime {
-                                                    // Find average of the last readings
+                                                    // Find average of the last readings to use as calibration data
                                                     avg.c1 = c.c1 / count;
                                                     avg.c2 = c.c2 / count;
                                                     avg.c3 = c.c3 / count;
                                                     avg.c4 = c.c4 / count;
 
-                                                    // Show averages on the screen
+                                                    // Show calibration on the screen
                                                     out_handle.append(&format!(
                                                         "\nCalibration {} {} {} {}\n\n",
                                                         avg.c1, avg.c2, avg.c3, avg.c4
@@ -318,16 +323,6 @@ fn start(
                                                 }
 
                                                 if count > ctime {
-                                                    // Send to display window
-                                                    out_handle.append(&format!(
-                                                        "{},{},{},{},{},{}\n",
-                                                        file_csv_values.dt,
-                                                        file_csv_values.tm,
-                                                        file_csv_values.v1 - avg.c1,
-                                                        file_csv_values.v2 - avg.c2,
-                                                        file_csv_values.v3 - avg.c3,
-                                                        file_csv_values.v4 - avg.c4,
-                                                    ));
                                                     // Make CSV to send to the file
                                                     let file_out: String = format!(
                                                         "{},{},{},{},{},{}\n",
@@ -339,6 +334,9 @@ fn start(
                                                         file_csv_values.v4 - avg.c4,
                                                     );
 
+                                                    // Send to display window
+                                                    out_handle.append(&file_out);
+
                                                     // Send to file
                                                     match f.write_all(&file_out.into_bytes()) {
                                                         Ok(_) => (),
@@ -347,17 +345,22 @@ fn start(
                                                         }
                                                     };
                                                 }
+
+                                                // Make sure window updates
                                                 awake();
 
                                                 // Clear out buffers for the next line
                                                 out_buf.clear();
                                                 final_buf.clear();
                                                 one_line.clear();
+
                                             } else {
                                                 // Add what we have so far
                                                 one_line.append(&mut ",".to_string().into_bytes());
+
                                                 // Keep only the count output
                                                 one_line.append(&mut out_buf[4..8].to_vec());
+
                                                 // Clear the output buffer
                                                 out_buf.clear();
                                             }
