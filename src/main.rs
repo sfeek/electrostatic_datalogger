@@ -136,7 +136,7 @@ fn start(
     frame: &mut Frame,
 ) {
     // How many records for calibration, 2 records for every second
-    let ctime = 10;
+    let ctime = 15;
 
     // Set thread status to running
     *running.write().unwrap() = 1;
@@ -447,7 +447,6 @@ fn draw_circles(frame: &mut Frame, radius: &Vec<i32>) {
 
     // Draw the circle with the right color
     frame.draw(move |_| {
-
         // Clear the frame
         draw_rect_fill(410, 15, 375, 390, Color::Dark1);
 
@@ -469,20 +468,21 @@ fn draw_circles(frame: &mut Frame, radius: &Vec<i32>) {
             }
 
             // Scale the circle diameter
-            let diameter = d.abs() / 40 + 10;
+            let diameter = d.abs() / 20 + 10;
+            let offset = diameter / 2;
 
             match cnt {
                 0 => {
-                    draw_circle_fill(598, 110, diameter, c);
+                    draw_circle_fill(598 - offset, 110 - offset, diameter, c);
                 }
                 1 => {
-                    draw_circle_fill(694, 210, diameter, c);
+                    draw_circle_fill(694 - offset, 210 - offset, diameter, c);
                 }
                 2 => {
-                    draw_circle_fill(598, 310, diameter, c);
+                    draw_circle_fill(598 - offset, 310 - offset, diameter, c);
                 }
                 3 => {
-                    draw_circle_fill(502, 210, diameter, c);
+                    draw_circle_fill(502 - offset, 210 - offset, diameter, c);
                 }
                 _ => {}
             }
