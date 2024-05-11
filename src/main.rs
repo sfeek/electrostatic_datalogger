@@ -2,7 +2,10 @@
 use chrono::prelude::*;
 use csv::*;
 use fltk::prelude::*;
-use fltk::{app::*, button::*, dialog::*, enums::FrameType, frame::*, misc::*, text::*, window::*};
+use fltk::{
+    app::*, button::*, dialog::*, draw::*, enums::Color, enums::FrameType, frame::*, misc::*,
+    text::*, window::*,
+};
 use serde::Deserialize;
 use std::io::prelude::*;
 use std::{fs::OpenOptions, io::Write, sync::*, thread};
@@ -21,7 +24,6 @@ struct CValues {
     c3: i32,
     c4: i32,
 }
-
 
 #[derive(Debug, Deserialize)]
 struct OneLineTimeStamp {
@@ -58,10 +60,15 @@ fn main() {
     // Output and Com Port text boxes
     let mut output: SimpleTerminal = SimpleTerminal::new(10, 10, 385, 400, "");
     let mut frame: Frame = Frame::new(405, 10, 385, 400, "");
-    let mut com_port: InputChoice = InputChoice::new(350, 420, 80, 30, "COM Port");
+    let mut com_port: InputChoice = InputChoice::new(200, 420, 80, 30, "COM Port");
 
     frame.set_frame(FrameType::EmbossedFrame);
 
+    let d = vec![0; 4];
+
+    draw_circles(&mut frame, &d);
+
+    // Attributes for the terminal window
     output.set_stay_at_bottom(true);
     output.set_ansi(false);
     output.set_cursor_style(Cursor::Normal);
@@ -102,6 +109,7 @@ fn main() {
                         &mut start_button,
                         &mut stop_button,
                         &mut file_button,
+                        &mut frame,
                     );
                 }
                 Message::Stop => stop(
@@ -125,8 +133,11 @@ fn start(
     start_button: &mut Button,
     stop_button: &mut Button,
     file_button: &mut Button,
+    frame: &mut Frame,
 ) {
-    let ctime = 30;
+    // How many records for calibration, 2 records for every second
+    let ctime = 15;
+
     // Set thread status to running
     *running.write().unwrap() = 1;
 
@@ -137,7 +148,7 @@ fn start(
         return;
     }
 
-    // Toggle the start/stop buttons
+    // Toggle the start/stop/file buttons
     start_button.deactivate();
     stop_button.activate();
     file_button.deactivate();
@@ -145,6 +156,7 @@ fn start(
     // Make a clone of the thread status for the sub thread
     let running = Arc::clone(&running);
 
+    // Place to store averages from calibration
     let mut avg = CValues {
         c1: 0,
         c2: 0,
@@ -178,6 +190,7 @@ fn start(
     let mut start_button = start_button.clone();
     let mut stop_button = stop_button.clone();
     let mut file_button = file_button.clone();
+    let mut frame = frame.clone();
 
     // Spawn the subthread to take readings
     thread::spawn(move || {
@@ -186,6 +199,7 @@ fn start(
         let mut out_buf: Vec<u8> = Vec::new();
         let mut final_buf: Vec<u8> = Vec::new();
         let mut one_line: Vec<u8> = Vec::new();
+        let mut diameters: Vec<i32> = vec![0; 4];
 
         let mut count = 0;
 
@@ -228,6 +242,7 @@ fn start(
             }
         }
 
+        // Let the user know that calibration is started
         out_handle.append(&format!("\n*** Calibration Started ***\n"));
 
         // Read data and write to window and file
@@ -256,6 +271,7 @@ fn start(
                                                 // Add one to the record count
                                                 count += 1;
 
+                                                // Get timestamp from OS
                                                 let mut time_stamp: Vec<u8> = Local::now()
                                                     .format("%Y-%m-%d,%H:%M:%S")
                                                     .to_string()
@@ -279,7 +295,7 @@ fn start(
                                                     file_csv_values = result.unwrap();
                                                 }
 
-                                                // Send to display window
+                                                // Send calibration data to display window
                                                 if count < ctime {
                                                     out_handle.append(&format!(
                                                         "{} {} {} {} {}\n",
@@ -297,15 +313,15 @@ fn start(
                                                 c.c3 += file_csv_values.v3;
                                                 c.c4 += file_csv_values.v4;
 
-                                                // Check to see if we have 30 readings and switch to logging mode
+                                                // Check to see if we have correct number of readings and switch to logging mode
                                                 if count == ctime {
-                                                    // Find average of the last readings
+                                                    // Find average of the last readings to use as calibration data
                                                     avg.c1 = c.c1 / count;
                                                     avg.c2 = c.c2 / count;
                                                     avg.c3 = c.c3 / count;
                                                     avg.c4 = c.c4 / count;
 
-                                                    // Show averages on the screen
+                                                    // Show calibration on the screen
                                                     out_handle.append(&format!(
                                                         "\nCalibration {} {} {} {}\n\n",
                                                         avg.c1, avg.c2, avg.c3, avg.c4
@@ -318,26 +334,28 @@ fn start(
                                                 }
 
                                                 if count > ctime {
-                                                    // Send to display window
-                                                    out_handle.append(&format!(
-                                                        "{},{},{},{},{},{}\n",
-                                                        file_csv_values.dt,
-                                                        file_csv_values.tm,
-                                                        file_csv_values.v1 - avg.c1,
-                                                        file_csv_values.v2 - avg.c2,
-                                                        file_csv_values.v3 - avg.c3,
-                                                        file_csv_values.v4 - avg.c4,
-                                                    ));
+                                                    // Precalculate the diameters
+                                                    diameters[0] = file_csv_values.v1 - avg.c1;
+                                                    diameters[1] = file_csv_values.v2 - avg.c2;
+                                                    diameters[2] = file_csv_values.v3 - avg.c3;
+                                                    diameters[3] = file_csv_values.v4 - avg.c4;
+
                                                     // Make CSV to send to the file
                                                     let file_out: String = format!(
                                                         "{},{},{},{},{},{}\n",
                                                         file_csv_values.dt,
                                                         file_csv_values.tm,
-                                                        file_csv_values.v1 - avg.c1,
-                                                        file_csv_values.v2 - avg.c2,
-                                                        file_csv_values.v3 - avg.c3,
-                                                        file_csv_values.v4 - avg.c4,
+                                                        diameters[0],
+                                                        diameters[1],
+                                                        diameters[2],
+                                                        diameters[3],
                                                     );
+
+                                                    // Send to display window
+                                                    out_handle.append(&file_out);
+
+                                                    // Send to graphic window
+                                                    draw_circles(&mut frame, &diameters);
 
                                                     // Send to file
                                                     match f.write_all(&file_out.into_bytes()) {
@@ -347,6 +365,8 @@ fn start(
                                                         }
                                                     };
                                                 }
+
+                                                // Make sure window updates
                                                 awake();
 
                                                 // Clear out buffers for the next line
@@ -356,8 +376,10 @@ fn start(
                                             } else {
                                                 // Add what we have so far
                                                 one_line.append(&mut ",".to_string().into_bytes());
+
                                                 // Keep only the count output
                                                 one_line.append(&mut out_buf[4..8].to_vec());
+
                                                 // Clear the output buffer
                                                 out_buf.clear();
                                             }
@@ -415,4 +437,56 @@ fn file_chooser(app: &App) -> String {
     }
 
     fc.value(1).unwrap()
+}
+
+// Draw Circles
+fn draw_circles(frame: &mut Frame, radius: &Vec<i32>) {
+    //let mut frame = frame.clone();
+    let radius = radius.clone();
+    let mut frame2 = frame.clone();
+
+    // Draw the circle with the right color
+    frame.draw(move |_| {
+        // Clear the frame
+        draw_rect_fill(410, 15, 375, 390, Color::Dark1);
+
+        // Cycle through the 4 dots
+        for cnt in 0..4 {
+            let mut c: Color;
+
+            let d: i32 = radius[cnt];
+
+            // Choose Red or Green if positive or negative or Yellow if below threshold
+            c = Color::Yellow;
+
+            if d < -40 {
+                c = Color::Green;
+            }
+
+            if d > 40 {
+                c = Color::Red;
+            }
+
+            // Scale the circle diameter
+            let diameter = d.abs() / 20 + 10;
+            let offset = diameter / 2;
+
+            match cnt {
+                0 => {
+                    draw_circle_fill(598 - offset, 110 - offset, diameter, c);
+                }
+                1 => {
+                    draw_circle_fill(694 - offset, 210 - offset, diameter, c);
+                }
+                2 => {
+                    draw_circle_fill(598 - offset, 310 - offset, diameter, c);
+                }
+                3 => {
+                    draw_circle_fill(502 - offset, 210 - offset, diameter, c);
+                }
+                _ => {}
+            }
+        }
+    });
+    frame2.redraw();
 }
