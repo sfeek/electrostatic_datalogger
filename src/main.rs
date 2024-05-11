@@ -2,7 +2,10 @@
 use chrono::prelude::*;
 use csv::*;
 use fltk::prelude::*;
-use fltk::{app::*, button::*, dialog::*, enums::FrameType, frame::*, misc::*, text::*, window::*};
+use fltk::{
+    app::*, button::*, dialog::*, draw::*, enums::Color, enums::FrameType, frame::*, misc::*,
+    text::*, window::*,
+};
 use serde::Deserialize;
 use std::io::prelude::*;
 use std::{fs::OpenOptions, io::Write, sync::*, thread};
@@ -61,6 +64,10 @@ fn main() {
 
     frame.set_frame(FrameType::EmbossedFrame);
 
+    let d = vec![0; 4];
+
+    draw_circles(&mut frame, &d);
+
     // Attributes for the terminal window
     output.set_stay_at_bottom(true);
     output.set_ansi(false);
@@ -102,6 +109,7 @@ fn main() {
                         &mut start_button,
                         &mut stop_button,
                         &mut file_button,
+                        &mut frame,
                     );
                 }
                 Message::Stop => stop(
@@ -125,9 +133,10 @@ fn start(
     start_button: &mut Button,
     stop_button: &mut Button,
     file_button: &mut Button,
+    frame: &mut Frame,
 ) {
     // How many records for calibration, 2 records for every second
-    let ctime = 30;
+    let ctime = 10;
 
     // Set thread status to running
     *running.write().unwrap() = 1;
@@ -181,6 +190,7 @@ fn start(
     let mut start_button = start_button.clone();
     let mut stop_button = stop_button.clone();
     let mut file_button = file_button.clone();
+    let mut frame = frame.clone();
 
     // Spawn the subthread to take readings
     thread::spawn(move || {
@@ -189,6 +199,7 @@ fn start(
         let mut out_buf: Vec<u8> = Vec::new();
         let mut final_buf: Vec<u8> = Vec::new();
         let mut one_line: Vec<u8> = Vec::new();
+        let mut diameters: Vec<i32> = vec![0; 4];
 
         let mut count = 0;
 
@@ -323,19 +334,28 @@ fn start(
                                                 }
 
                                                 if count > ctime {
+                                                    // Precalculate the diameters
+                                                    diameters[0] = file_csv_values.v1 - avg.c1;
+                                                    diameters[1] = file_csv_values.v2 - avg.c2;
+                                                    diameters[2] = file_csv_values.v3 - avg.c3;
+                                                    diameters[3] = file_csv_values.v4 - avg.c4;
+
                                                     // Make CSV to send to the file
                                                     let file_out: String = format!(
                                                         "{},{},{},{},{},{}\n",
                                                         file_csv_values.dt,
                                                         file_csv_values.tm,
-                                                        file_csv_values.v1 - avg.c1,
-                                                        file_csv_values.v2 - avg.c2,
-                                                        file_csv_values.v3 - avg.c3,
-                                                        file_csv_values.v4 - avg.c4,
+                                                        diameters[0],
+                                                        diameters[1],
+                                                        diameters[2],
+                                                        diameters[3],
                                                     );
 
                                                     // Send to display window
                                                     out_handle.append(&file_out);
+
+                                                    // Send to graphic window
+                                                    draw_circles(&mut frame, &diameters);
 
                                                     // Send to file
                                                     match f.write_all(&file_out.into_bytes()) {
@@ -353,7 +373,6 @@ fn start(
                                                 out_buf.clear();
                                                 final_buf.clear();
                                                 one_line.clear();
-
                                             } else {
                                                 // Add what we have so far
                                                 one_line.append(&mut ",".to_string().into_bytes());
@@ -418,4 +437,56 @@ fn file_chooser(app: &App) -> String {
     }
 
     fc.value(1).unwrap()
+}
+
+// Draw Circles
+fn draw_circles(frame: &mut Frame, radius: &Vec<i32>) {
+    //let mut frame = frame.clone();
+    let radius = radius.clone();
+    let mut frame2 = frame.clone();
+
+    // Draw the circle with the right color
+    frame.draw(move |_| {
+
+        // Clear the frame
+        draw_rect_fill(410, 15, 375, 390, Color::Dark1);
+
+        // Cycle through the 4 dots
+        for cnt in 0..4 {
+            let mut c: Color;
+
+            let d: i32 = radius[cnt];
+
+            // Choose Red or Green if positive or negative or Yellow if below threshold
+            c = Color::Yellow;
+
+            if d < -40 {
+                c = Color::Green;
+            }
+
+            if d > 40 {
+                c = Color::Red;
+            }
+
+            // Scale the circle diameter
+            let diameter = d.abs() / 40 + 10;
+
+            match cnt {
+                0 => {
+                    draw_circle_fill(598, 110, diameter, c);
+                }
+                1 => {
+                    draw_circle_fill(694, 210, diameter, c);
+                }
+                2 => {
+                    draw_circle_fill(598, 310, diameter, c);
+                }
+                3 => {
+                    draw_circle_fill(502, 210, diameter, c);
+                }
+                _ => {}
+            }
+        }
+    });
+    frame2.redraw();
 }
