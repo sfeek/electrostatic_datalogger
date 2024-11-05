@@ -504,19 +504,19 @@ fn draw_lines(
         draw_rect_fill(410, 15, 375, 390, Color::Dark1);
 
         let mut old_xpos: i32 = 410;
-        let mut old_ypos1: i32 = 78;
-        let mut old_ypos2: i32 = 156;
-        let mut old_ypos3: i32 = 234;
-        let mut old_ypos4: i32 = 312;
+        let mut old_ypos1: i32 = 90;
+        let mut old_ypos2: i32 = 180;
+        let mut old_ypos3: i32 = 270;
+        let mut old_ypos4: i32 = 360;
 
         // Draw four graphs
         for x in 0..GRAPH_SAMPLES {
             let xpos = (x * 5 + 410) as i32;
 
-            let ypos1 = graph_data1[x as usize] / 10 + 78;
-            let ypos2 = graph_data2[x as usize] / 10 + 156;
-            let ypos3 = graph_data3[x as usize] / 10 + 234;
-            let ypos4 = graph_data4[x as usize] / 10 + 312;
+            let ypos1 = graph_data1[x as usize] / 10 + 90;
+            let ypos2 = graph_data2[x as usize] / 10 + 180;
+            let ypos3 = graph_data3[x as usize] / 10 + 270;
+            let ypos4 = graph_data4[x as usize] / 10 + 360;
 
             set_draw_color(Color::Red);
             draw_line(old_xpos, old_ypos1, xpos, ypos1);
