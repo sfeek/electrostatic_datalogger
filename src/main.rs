@@ -10,7 +10,7 @@ use serde::Deserialize;
 use std::io::prelude::*;
 use std::{fs::OpenOptions, io::Write, sync::*, thread};
 
-const GRAPH_SAMPLES: usize = 70;
+const GRAPH_SAMPLES: usize = 75;
 
 #[derive(Debug, Clone, Copy)]
 pub enum Message {
@@ -57,7 +57,7 @@ fn main() {
     let mut file_name: String = String::new();
 
     // Main Window
-    let mut wind = Window::new(100, 100, 800, 530, "Electrostatic Data Logger v1.0");
+    let mut wind = Window::new(100, 100, 800, 530, "Electrostatic Data Logger Graph Version v1.0");
 
     // Output and Com Port text boxes
     let mut output: SimpleTerminal = SimpleTerminal::new(10, 10, 385, 400, "");
@@ -381,7 +381,7 @@ fn start(
                                                     out_handle.append(&file_out);
 
                                                     // Send to graphic window
-                                                    draw_lines(
+                                                    draw_graphs(
                                                         &mut frame,
                                                         &graph_data1,
                                                         &graph_data2,
@@ -423,7 +423,7 @@ fn start(
                                     }
                                 }
                                 Err(_) => {
-                                    //out_handle.append(&format!("\nSerial Read Error\n"));
+                                    
                                 }
                             }
                         }
@@ -471,6 +471,7 @@ fn file_chooser(app: &App) -> String {
     fc.value(1).unwrap()
 }
 
+// Create a rolling array
 fn rolling_array(array: &[i32], value: i32, n: usize) -> Vec<i32> {
     let mut ary: Vec<i32> = vec![0; n];
     let c = n - 1;
@@ -485,7 +486,7 @@ fn rolling_array(array: &[i32], value: i32, n: usize) -> Vec<i32> {
 }
 
 // Draw Lines
-fn draw_lines(
+fn draw_graphs(
     frame: &mut Frame,
     graph_data1: &Vec<i32>,
     graph_data2: &Vec<i32>,
@@ -498,25 +499,25 @@ fn draw_lines(
     let graph_data3 = graph_data3.clone();
     let graph_data4 = graph_data4.clone();
 
-    // Draw the circle with the right color
+    // Draw the graphs
     frame.draw(move |_| {
         // Clear the frame
         draw_rect_fill(410, 15, 375, 390, Color::Dark1);
 
         let mut old_xpos: i32 = 410;
-        let mut old_ypos1: i32 = 90;
-        let mut old_ypos2: i32 = 180;
-        let mut old_ypos3: i32 = 270;
-        let mut old_ypos4: i32 = 360;
+        let mut old_ypos1: i32 = 80;
+        let mut old_ypos2: i32 = 160;
+        let mut old_ypos3: i32 = 240;
+        let mut old_ypos4: i32 = 320;
 
         // Draw four graphs
         for x in 0..GRAPH_SAMPLES {
             let xpos = (x * 5 + 410) as i32;
 
-            let ypos1 = graph_data1[x as usize] / 10 + 90;
-            let ypos2 = graph_data2[x as usize] / 10 + 180;
-            let ypos3 = graph_data3[x as usize] / 10 + 270;
-            let ypos4 = graph_data4[x as usize] / 10 + 360;
+            let ypos1 = -(graph_data1[x] / 25) + 80;
+            let ypos2 = -(graph_data2[x] / 25) + 160;
+            let ypos3 = -(graph_data3[x] / 25) + 240;
+            let ypos4 = -(graph_data4[x] / 25) + 320;
 
             set_draw_color(Color::Red);
             draw_line(old_xpos, old_ypos1, xpos, ypos1);
