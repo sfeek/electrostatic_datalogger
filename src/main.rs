@@ -10,6 +10,8 @@ use serde::Deserialize;
 use std::io::prelude::*;
 use std::{fs::OpenOptions, io::Write, sync::*, thread};
 
+const GRAPH_SAMPLES: usize = 70;
+
 #[derive(Debug, Clone, Copy)]
 pub enum Message {
     Start,
@@ -63,10 +65,6 @@ fn main() {
     let mut com_port: InputChoice = InputChoice::new(200, 420, 80, 30, "COM Port");
 
     frame.set_frame(FrameType::EmbossedFrame);
-
-    let d = vec![0; 4];
-
-    draw_circles(&mut frame, &d);
 
     // Attributes for the terminal window
     output.set_stay_at_bottom(true);
@@ -137,6 +135,12 @@ fn start(
 ) {
     // How many records for calibration, 2 records for every second
     let ctime = 15;
+
+    // Setup 4 vectors to store graph data and intialize them to zero
+    let mut graph_data1: Vec<i32> = vec![0; GRAPH_SAMPLES];
+    let mut graph_data2: Vec<i32> = vec![0; GRAPH_SAMPLES];
+    let mut graph_data3: Vec<i32> = vec![0; GRAPH_SAMPLES];
+    let mut graph_data4: Vec<i32> = vec![0; GRAPH_SAMPLES];
 
     // Set thread status to running
     *running.write().unwrap() = 1;
@@ -351,11 +355,39 @@ fn start(
                                                         diameters[3],
                                                     );
 
+                                                    // Update data in the graph vectors
+                                                    graph_data1 = rolling_array(
+                                                        &graph_data1,
+                                                        diameters[0],
+                                                        GRAPH_SAMPLES,
+                                                    );
+                                                    graph_data2 = rolling_array(
+                                                        &graph_data2,
+                                                        diameters[1],
+                                                        GRAPH_SAMPLES,
+                                                    );
+                                                    graph_data3 = rolling_array(
+                                                        &graph_data3,
+                                                        diameters[2],
+                                                        GRAPH_SAMPLES,
+                                                    );
+                                                    graph_data4 = rolling_array(
+                                                        &graph_data4,
+                                                        diameters[3],
+                                                        GRAPH_SAMPLES,
+                                                    );
+
                                                     // Send to display window
                                                     out_handle.append(&file_out);
 
                                                     // Send to graphic window
-                                                    draw_circles(&mut frame, &diameters);
+                                                    draw_lines(
+                                                        &mut frame,
+                                                        &graph_data1,
+                                                        &graph_data2,
+                                                        &graph_data3,
+                                                        &graph_data4,
+                                                    );
 
                                                     // Send to file
                                                     match f.write_all(&file_out.into_bytes()) {
@@ -391,7 +423,7 @@ fn start(
                                     }
                                 }
                                 Err(_) => {
-                                    out_handle.append(&format!("\nSerial Read Error\n"));
+                                    //out_handle.append(&format!("\nSerial Read Error\n"));
                                 }
                             }
                         }
@@ -439,53 +471,70 @@ fn file_chooser(app: &App) -> String {
     fc.value(1).unwrap()
 }
 
-// Draw Circles
-fn draw_circles(frame: &mut Frame, radius: &Vec<i32>) {
-    //let mut frame = frame.clone();
-    let radius = radius.clone();
+fn rolling_array(array: &[i32], value: i32, n: usize) -> Vec<i32> {
+    let mut ary: Vec<i32> = vec![0; n];
+    let c = n - 1;
+
+    for v in 0..c {
+        ary[v] = array[v + 1];
+    }
+
+    ary[c] = value;
+
+    ary
+}
+
+// Draw Lines
+fn draw_lines(
+    frame: &mut Frame,
+    graph_data1: &Vec<i32>,
+    graph_data2: &Vec<i32>,
+    graph_data3: &Vec<i32>,
+    graph_data4: &Vec<i32>,
+) {
     let mut frame2 = frame.clone();
+    let graph_data1 = graph_data1.clone();
+    let graph_data2 = graph_data2.clone();
+    let graph_data3 = graph_data3.clone();
+    let graph_data4 = graph_data4.clone();
 
     // Draw the circle with the right color
     frame.draw(move |_| {
         // Clear the frame
         draw_rect_fill(410, 15, 375, 390, Color::Dark1);
 
-        // Cycle through the 4 dots
-        for cnt in 0..4 {
-            let mut c: Color;
+        let mut old_xpos: i32 = 410;
+        let mut old_ypos1: i32 = 78;
+        let mut old_ypos2: i32 = 156;
+        let mut old_ypos3: i32 = 234;
+        let mut old_ypos4: i32 = 312;
 
-            let d: i32 = radius[cnt];
+        // Draw four graphs
+        for x in 0..GRAPH_SAMPLES {
+            let xpos = (x * 5 + 410) as i32;
 
-            // Choose Red or Green if positive or negative or Yellow if below threshold
-            c = Color::Yellow;
+            let ypos1 = graph_data1[x as usize] / 10 + 78;
+            let ypos2 = graph_data2[x as usize] / 10 + 156;
+            let ypos3 = graph_data3[x as usize] / 10 + 234;
+            let ypos4 = graph_data4[x as usize] / 10 + 312;
 
-            if d < -40 {
-                c = Color::Green;
-            }
+            set_draw_color(Color::Red);
+            draw_line(old_xpos, old_ypos1, xpos, ypos1);
 
-            if d > 40 {
-                c = Color::Red;
-            }
+            set_draw_color(Color::Green);
+            draw_line(old_xpos, old_ypos2, xpos, ypos2);
 
-            // Scale the circle diameter
-            let diameter = d.abs() / 20 + 10;
-            let offset = diameter / 2;
+            set_draw_color(Color::Blue);
+            draw_line(old_xpos, old_ypos3, xpos, ypos3);
 
-            match cnt {
-                0 => {
-                    draw_circle_fill(598 - offset, 110 - offset, diameter, c);
-                }
-                1 => {
-                    draw_circle_fill(694 - offset, 210 - offset, diameter, c);
-                }
-                2 => {
-                    draw_circle_fill(598 - offset, 310 - offset, diameter, c);
-                }
-                3 => {
-                    draw_circle_fill(502 - offset, 210 - offset, diameter, c);
-                }
-                _ => {}
-            }
+            set_draw_color(Color::Yellow);
+            draw_line(old_xpos, old_ypos4, xpos, ypos4);
+
+            old_xpos= xpos;
+            old_ypos1 = ypos1;
+            old_ypos2 = ypos2;
+            old_ypos3 = ypos3;
+            old_ypos4 = ypos4;
         }
     });
     frame2.redraw();
