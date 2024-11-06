@@ -485,7 +485,7 @@ fn rolling_array(array: &[i32], value: i32, n: usize) -> Vec<i32> {
     ary
 }
 
-// Draw Lines
+// Draw Graphs
 fn draw_graphs(
     frame: &mut Frame,
     graph_data1: &Vec<i32>,
